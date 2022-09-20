@@ -1,5 +1,5 @@
 # nolint start
-packagename <- "rpkgTemplate"
+packagename <- "kdry"
 
 # remove existing description object
 unlink("DESCRIPTION")
@@ -19,19 +19,20 @@ my_desc$set_authors(c(
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
-my_desc$set_version("0.0.0.9003")
+my_desc$set_version("0.0.0.9001")
 # The title of your package
-my_desc$set(Title = "Template for Creating R Packages")
+my_desc$set(Title = "Kapsner's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
 my_desc$set(Description = paste0(
-  "A template repository for creating R packages."
+  "A collection of helper functions and code snippets to avoid redundancy in ",
+  "the spirit of the \"Don't repeat yourself\" principle of software development."
 ))
 # The description of your package
 my_desc$set("Date/Publication" = paste(as.character(Sys.time()), "UTC"))
 # The urls
-my_desc$set("URL", "https://github.com/kapsner/rpkgTemplate")
+my_desc$set("URL", "https://github.com/kapsner/kdry")
 my_desc$set("BugReports",
-            "https://github.com/kapsner/rpkgTemplate/issues")
+            "https://github.com/kapsner/kdry/issues")
 
 # Vignette Builder
 my_desc$set("VignetteBuilder" = "knitr")
