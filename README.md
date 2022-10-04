@@ -7,3 +7,11 @@
 <!-- badges: end -->
 
 This R package provides a collection of helper functions and code snippets to avoid redundancy in the spirit of the *"Don't repeat yourself"* software development principle.
+
+
+| prefix | description |
+| ------ | ----------- |
+| dtr_   | Data transforms |
+| mlh_   | Machine Learning helper |
+| pch_   | Parallel computing helper |
+| misc_  | Miscellaneous functions |
