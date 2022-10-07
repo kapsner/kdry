@@ -2,6 +2,7 @@
 
 export(dtr_matrix2df)
 export(misc_argument_catcher)
+export(misc_duplicated_by_names)
 export(misc_subset_option)
 export(misc_update_default_arguments)
 export(mlh_outsample_row_indices)
