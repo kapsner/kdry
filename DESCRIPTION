@@ -14,15 +14,18 @@ Depends:
     R (>= 2.10)
 Imports: 
     data.table,
+    magrittr
+Suggests: 
     doParallel,
     foreach,
-    parallel
-Suggests: 
+    ggplot2,
     knitr,
     lintr,
-    testthat (>= 3.0.1)
+    parallel,
+    testthat (>= 3.0.1),
+    viridis
 VignetteBuilder: 
     knitr
-Date/Publication: 2022-10-04 19:48:08 UTC
+Date/Publication: 2022-10-10 15:36:00 UTC
 Encoding: UTF-8
 RoxygenNote: 7.2.1
