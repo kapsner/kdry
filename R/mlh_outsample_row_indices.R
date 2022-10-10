@@ -5,14 +5,17 @@ mlh_outsample_row_indices <- function(
     type = NULL
   ) {
   fold_ids <- sapply(
-    X = fold_list,
+    X = names(fold_list),
     FUN = function(x) {
-      setdiff(seq_len(training_data_nrows), x)
-    }
+      in_sample_ids <- fold_list[[x]]
+      setdiff(seq_len(training_data_nrows), in_sample_ids)
+    },
+    simplify = FALSE,
+    USE.NAMES = TRUE
   )
 
   if (is.null(type)) {
-    return(fold_list)
+    return(fold_ids)
   } else if (type == "glmnet") {
     # assign each row of the dataset to a specific test fold
     fids <- data.table::data.table()
