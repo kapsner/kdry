@@ -1,9 +1,13 @@
 # kdry NEWS
 
-## Unreleased (2022-10-10)
+## Unreleased (2022-10-11)
 
 #### New features
 
+-   added parsing of color arguments to parallel coordinates plot
+    ([d043226](https://github.com/kapsner/kdry/tree/d043226211b8dab6dabc9c603de0dc709ce2e976))
+-   added plt\_parallel\_coordinates
+    ([27a0861](https://github.com/kapsner/kdry/tree/27a0861cca8fc77d3e07d1d0136e5ff6cd1b0341))
 -   added list.append
     ([9f80dec](https://github.com/kapsner/kdry/tree/9f80dec219d457bfbf6beb3601d6e4ff11b8178d))
 -   added duplicated\_by\_names
@@ -24,4 +28,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...28cc902`](https://github.com/kapsner/kdry/compare/41f1eba...28cc902)
+[`41f1eba...d043226`](https://github.com/kapsner/kdry/compare/41f1eba...d043226)

@@ -22,10 +22,9 @@ Suggests:
     knitr,
     lintr,
     parallel,
-    testthat (>= 3.0.1),
-    viridis
+    testthat (>= 3.0.1)
 VignetteBuilder: 
     knitr
-Date/Publication: 2022-10-10 15:36:00 UTC
+Date/Publication: 2022-10-11 12:42:02 UTC
 Encoding: UTF-8
 RoxygenNote: 7.2.1
