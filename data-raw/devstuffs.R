@@ -61,7 +61,6 @@ usethis::use_package("ggplot2", type = "Suggests")
 usethis::use_package("parallel", type = "Suggests")
 usethis::use_package("doParallel", type = "Suggests")
 usethis::use_package("foreach", type = "Suggests")
-usethis::use_package("viridis", type = "Suggests")
 
 
 # dev packages

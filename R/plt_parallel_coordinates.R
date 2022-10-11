@@ -2,7 +2,8 @@
 plt_parallel_coordinates <- function(
     data,
     cols,
-    color = NULL,
+    color_variable = NULL,
+    color_args = list(alpha = 0.6, begin = .1, end = .9, option = "inferno", direction = 1),
     line_jitter = list(w = 0.04, h = 0.04),
     text_label_size = 3.5
 ) {
@@ -15,19 +16,11 @@ plt_parallel_coordinates <- function(
       call. = FALSE
     )
   }
-  if (!requireNamespace("viridis", quietly = TRUE)) {
-    stop(
-      paste0(
-        "Package \"viridis\" must be installed to use ",
-        "\"plt_parallel_coordinates\"."
-      ),
-      call. = FALSE
-    )
-  }
+  stopifnot(is.list(color_args))
   vec <- colnames(data)[cols]
   data_copy <- data.table::copy(data)
-  if (!is.null(color)) {
-    data_copy <- data_copy[order(get(color), decreasing = TRUE)]
+  if (!is.null(color_variable)) {
+    data_copy <- data_copy[order(get(color_variable), decreasing = TRUE)]
   }
   data_copy[
     ,
@@ -42,7 +35,7 @@ plt_parallel_coordinates <- function(
   data_copy$id <- rownames(data)
   data_copy <- data.table::melt.data.table(
     data = data_copy,
-    id.vars = c("id", color),
+    id.vars = c("id", color_variable),
     measure.vars = vec
   )
   #data_copy[, ("x") := as.integer(get("variable"))]
@@ -52,7 +45,7 @@ plt_parallel_coordinates <- function(
       ggplot2::aes_string(
         x = "variable",
         y = "value",
-        color = color)
+        color = color_variable)
     ) +
     ggplot2::geom_line(
       ggplot2::aes_string(group = "id"),
@@ -61,11 +54,12 @@ plt_parallel_coordinates <- function(
         h = line_jitter[["h"]]
       )
     ) +
-    viridis::scale_color_viridis(
-      option = "inferno",
-      end = .1,
-      begin = 0.9,
-      alpha = 0.6
+    ggplot2::scale_color_viridis_c(
+      option = color_args$option,
+      alpha = color_args$alpha,
+      begin = color_args$begin,
+      end = color_args$end,
+      direction = color_args$direction
     ) +
     ggplot2::xlab("Hyperparameter") +
     ggplot2::ylab("Parameter value") +
