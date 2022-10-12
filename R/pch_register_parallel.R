@@ -19,6 +19,8 @@ pch_register_parallel <- function(ncores) {
       call. = FALSE
     )
   }
+  stopifnot(is.integer(as.integer(ncores)))
+  ncores <- as.integer(ncores)
   cl <- parallel::makePSOCKcluster(ncores)
   doParallel::registerDoParallel(cl)
   return(cl)
