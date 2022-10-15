@@ -1,19 +1,36 @@
-# converts a matrix to a data.table. This is important, e.g. for ranger and
-# coxph in order to restore R-data types such as factors.
-#' @export
-dtr_matrix2df <- function(matrix, cat_vars = NULL) {
-  if (inherits(x = matrix, what = c("matrix", "array"))) {
-    matrix_dt <- data.table::as.data.table(matrix)
-  } else if (inherits(x = matrix, what = c("data.frame"))) {
-    matrix_dt <- data.table::as.data.table(data.matrix(matrix))
-  }
+#' @title dtr_matrix2df
+#'
+#' @description Data transformation: Converts a `matrix` to `data.table` and
+#'   encodes categorical variables as `factor`.
+#'
+#' @param matrix An R `matrix` object.
+#' @param cat_vars A character vector with colnames that should be converted to
+#'   `factor` (default: NULL).
+#'
+#' @return A `data.table` is returned.
 
+#' @examples
+#' data("iris")
+#' mat <- data.matrix(iris)
+#' dataset <- dtr_matrix2df(mat)
+#' str(dataset)
+#'
+#' dataset <- dtr_matrix2df(mat, cat_vars = "Species")
+#' str(dataset)
+#' @export
+#'
+dtr_matrix2df <- function(matrix, cat_vars = NULL) {
+  stopifnot(
+    inherits(x = matrix, what = c("matrix", "array")),
+    ifelse(!is.null(cat_vars), is.character(cat_vars), TRUE),
+    intersect(cat_vars, colnames(matrix)) == cat_vars
+  )
+  matrix_dt <- data.table::as.data.table(matrix)
   if (!is.null(cat_vars)) {
-    cols_to_factor <- intersect(colnames(matrix_dt), cat_vars)
     matrix_dt[
       ,
-      (cols_to_factor) := lapply(X = .SD, FUN = factor),
-      .SDcols = cols_to_factor
+      (cat_vars) := lapply(X = .SD, FUN = factor),
+      .SDcols = cat_vars
     ]
   }
   return(matrix_dt)

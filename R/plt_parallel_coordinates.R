@@ -27,7 +27,7 @@ plt_parallel_coordinates <- function(
     (vec) := lapply(
       X = .SD,
       FUN = function(x) {
-        stats_normalize(x) %>%
+        sts_normalize(x) %>%
           round(digits = 3)
       }),
     .SDcols = vec
@@ -105,7 +105,7 @@ geom_label_params <- function(
 
       plt_dat <- data.table::data.table(
         "original_values" = data[, get(col_name)],
-        "normalized_values" = stats_normalize(data[, get(col_name)])
+        "normalized_values" = sts_normalize(data[, get(col_name)])
       )
 
       plt_dat <- plt_dat[, lapply(.SD, round, digits = 2)]
