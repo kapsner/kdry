@@ -1,5 +1,22 @@
+#' @title pch_clean_up
+#'
+#' @description Parallel computing helper function to clean up the parallel
+#'   backend.
+#'
+#' @param cl A cluster object of class `c("SOCKcluster", "cluster")`.
+#'
+#' @return The function returns nothing. Internally, it calls
+#'   `parallel::stopCluster()` and `foreach::registerDoSEQ()`.
+#'
+#' @seealso [parallel::stopCluster()], [foreach::registerDoSEQ()]
+
+#' @examples
+#' cl <- pch_register_parallel(pch_check_available_cores(2))
+#' pch_clean_up(cl)
 #' @export
+#
 pch_clean_up <- function(cl) {
+  stopifnot(inherits(cl, c("SOCKcluster", "cluster")))
   if (!requireNamespace("parallel", quietly = TRUE)) {
     stop(
       paste0(

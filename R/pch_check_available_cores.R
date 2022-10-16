@@ -1,5 +1,21 @@
+#' @title pch_check_available_cores
+#'
+#' @description Parallel computing helper function to check for the available
+#'   cores.
+#'
+#' @param ncores An integer. A number of cores requested for parallel computing
+#'   (default: `-1L`).
+#'
+#' @return The function returns an integer that indicates the number of cores
+#'   available. If `ncores <= parallel::detectCores()` the function returns
+#'   `ncores`. If `ncores > parallel::detectCores()`, the function returns
+#'   `parallel::detectCores() - 1L`.
+
+#' @examples
+#' pch_check_available_cores(2)
 #' @export
-pch_check_available_cores <- function(ncores) {
+#
+pch_check_available_cores <- function(ncores = -1L) {
   if (!requireNamespace("parallel", quietly = TRUE)) {
     stop(
       paste0(

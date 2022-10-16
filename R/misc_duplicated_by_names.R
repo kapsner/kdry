@@ -1,6 +1,6 @@
 #' @title misc_duplicated_by_names
 #'
-#' @description Miscellaneous helper function to detec items in an object
+#' @description Miscellaneous helper function to detect items in an object
 #'   with duplicated names, e.g. in named vectors or named lists.
 #'
 #' @param object An R object that has names.

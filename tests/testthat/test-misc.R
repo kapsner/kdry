@@ -46,3 +46,13 @@ test_that(
     expect_error(misc_duplicated_by_names(c(1, 2, 1, 1)))
   }
 )
+
+
+test_that(
+  desc = "test misc - misc_subset_options",
+  code = {
+
+    l1 <- misc_subset_options("default")
+    expect_type(l1, "list")
+  }
+)

@@ -16,7 +16,7 @@ Returns a logical vector of `length(object)` with `TRUE` indicating
   the identified items with duplicated names.
 }
 \description{
-Miscellaneous helper function to detec items in an object
+Miscellaneous helper function to detect items in an object
   with duplicated names, e.g. in named vectors or named lists.
 }
 \examples{
