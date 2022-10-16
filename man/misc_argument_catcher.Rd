@@ -13,8 +13,8 @@ misc_argument_catcher(...)
 A `list` is returned.
 }
 \description{
-Miscellaneous helper function to catch arguments passed with R's
-  ellipsis ("...").
+Miscellaneous helper function to type-save catch arguments
+  passed with R's ellipsis ("...").
 }
 \details{
 This function aims at catching arguments that have been passed to an
@@ -24,6 +24,7 @@ This function aims at catching arguments that have been passed to an
 }
 \examples{
 misc_argument_catcher(a = 1)
-misc_argument_catcher(a = 1, b = 2, c = 3)
-misc_argument_catcher(list(a = 1, b = 2, c = 3))
+misc_argument_catcher(a = 1, b = 2, c = 3, d = "car")
+misc_argument_catcher(list(a = 1, b = 2, c = 3, d = "car"))
+misc_argument_catcher(list(a = 1, b = 2, c = 3, d = "car"), f = 9)
 }
