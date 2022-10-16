@@ -33,6 +33,8 @@
 
 #### Docs
 
+-   finishing documentation
+    ([d9ab512](https://github.com/kapsner/kdry/tree/d9ab51200e4ac38aa1749167940fd23f84dd397b))
 -   working on function documentations
     ([c7213b5](https://github.com/kapsner/kdry/tree/c7213b5a25f097faf8a642dffb55b7a72760db08))
 -   started working on documentation; added unit tests
@@ -46,4 +48,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...c7213b5`](https://github.com/kapsner/kdry/compare/41f1eba...c7213b5)
+[`41f1eba...d9ab512`](https://github.com/kapsner/kdry/compare/41f1eba...d9ab512)
