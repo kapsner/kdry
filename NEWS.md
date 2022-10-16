@@ -1,9 +1,11 @@
 # kdry NEWS
 
-## Unreleased (2022-10-15)
+## Unreleased (2022-10-16)
 
 #### New features
 
+-   added list.update
+    ([03031a1](https://github.com/kapsner/kdry/tree/03031a16807bbad308f405aebb44d13679148ee6))
 -   added check for available cores
     ([9fed377](https://github.com/kapsner/kdry/tree/9fed377d6691eb6dd9298088e278060659078559))
 -   added parsing of color arguments to parallel coordinates plot
@@ -24,8 +26,15 @@
 -   removed wronge pkg name
     ([d9a347e](https://github.com/kapsner/kdry/tree/d9a347e6e793def1c0e67bb9ace798584ce3fe5c))
 
+#### Refactorings
+
+-   refactored argument catcher
+    ([0124672](https://github.com/kapsner/kdry/tree/01246724d47d1b123323b95167c459501d7104e2))
+
 #### Docs
 
+-   working on function documentations
+    ([c7213b5](https://github.com/kapsner/kdry/tree/c7213b5a25f097faf8a642dffb55b7a72760db08))
 -   started working on documentation; added unit tests
     ([b66666d](https://github.com/kapsner/kdry/tree/b66666dae1ae640f7258d40694ecb0b397561e87))
 
@@ -37,4 +46,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...b66666d`](https://github.com/kapsner/kdry/compare/41f1eba...b66666d)
+[`41f1eba...c7213b5`](https://github.com/kapsner/kdry/compare/41f1eba...c7213b5)

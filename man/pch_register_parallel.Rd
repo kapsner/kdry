@@ -11,7 +11,8 @@ pch_register_parallel(ncores)
 (default: `-1L`).}
 }
 \value{
-The function returns a object of class `c("SOCKcluster", "cluster")`.
+The function returns a object of class `c("SOCKcluster", "cluster")`,
+  created with `parallel::makePSOCKcluster()`.
 }
 \description{
 Parallel computing helper function to register a parallel

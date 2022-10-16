@@ -5,7 +5,8 @@
 #'
 #' @inheritParams pch_check_available_cores
 #'
-#' @return The function returns a object of class `c("SOCKcluster", "cluster")`.
+#' @return The function returns a object of class `c("SOCKcluster", "cluster")`,
+#'   created with `parallel::makePSOCKcluster()`.
 #'
 #' @seealso [parallel::makePSOCKcluster()], [doParallel::registerDoParallel()]
 

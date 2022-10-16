@@ -21,7 +21,7 @@
 #' list.update(l1, l2)
 #' @export
 #'
-list.update <- function(main_list, new_list, ...) {
+list.update <- function(main_list, new_list, ...) { # nolint
   stopifnot(
     is.list(new_list), is.list(main_list),
     identical(intersect(names(new_list), names(main_list)), names(new_list))
