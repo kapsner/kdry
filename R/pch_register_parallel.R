@@ -11,8 +11,10 @@
 #' @seealso [parallel::makePSOCKcluster()], [doParallel::registerDoParallel()]
 
 #' @examples
-#' cl <- pch_register_parallel(pch_check_available_cores(2))
-#' pch_clean_up(cl)
+#' if (require("doParallel") && require("foreach")) {
+#'   cl <- pch_register_parallel(pch_check_available_cores(2))
+#'   pch_clean_up(cl)
+#' }
 #' @export
 #
 pch_register_parallel <- function(ncores) {
