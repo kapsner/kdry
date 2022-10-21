@@ -28,8 +28,10 @@
 #' @seealso [ggplot2::scale_color_viridis_c()]
 
 #' @examples
-#' data("iris")
-#' plt_parallel_coordinates(data.table::as.data.table(iris[, -5]))
+#' if (require("ggplot2")) {
+#'   data("iris")
+#'   plt_parallel_coordinates(data.table::as.data.table(iris[, -5]))
+#' }
 #' @export
 #
 plt_parallel_coordinates <- function(
