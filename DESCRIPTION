@@ -20,12 +20,11 @@ Suggests:
     doParallel,
     foreach,
     ggplot2,
-    knitr,
     lintr,
     parallel,
     testthat (>= 3.0.1)
-VignetteBuilder: 
-    knitr
-Date/Publication: 2022-10-16 15:29:51 UTC
+Config/testthat/edition: 3
+Config/testthat/parallel: false
+Date/Publication: 2022-10-22 05:44:29 UTC
 Encoding: UTF-8
-RoxygenNote: 7.2.1
+Roxygen: list(markdown = TRUE)

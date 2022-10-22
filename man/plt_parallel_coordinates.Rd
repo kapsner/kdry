@@ -49,8 +49,10 @@ The color gradient of the plotted lines can be defined with a list
   The implementation to display categorical variables is still experimental.
 }
 \examples{
-data("iris")
-plt_parallel_coordinates(data.table::as.data.table(iris[, -5]))
+if (require("ggplot2")) {
+  data("iris")
+  plt_parallel_coordinates(data.table::as.data.table(iris[, -5]))
+}
 }
 \seealso{
 [ggplot2::scale_color_viridis_c()]

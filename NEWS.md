@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2022-10-16)
+## Unreleased (2022-10-21)
 
 #### New features
 
@@ -33,6 +33,14 @@
 
 #### Docs
 
+-   updated example
+    ([3fb3fb6](https://github.com/kapsner/kdry/tree/3fb3fb6d7715579f7a59fdc69d43555110da7198))
+-   updated examples
+    ([e79cf3f](https://github.com/kapsner/kdry/tree/e79cf3f3d25760d7686b597cd16b822314ef3cfb))
+-   updated example
+    ([e96326a](https://github.com/kapsner/kdry/tree/e96326a9b54314ac1ee384bbbe4cde844c06b6f2))
+-   updated readme with installation details
+    ([bcf9ebc](https://github.com/kapsner/kdry/tree/bcf9ebc8bc5420b21915c226ae1f6ab52b77a4c6))
 -   finishing documentation
     ([d9ab512](https://github.com/kapsner/kdry/tree/d9ab51200e4ac38aa1749167940fd23f84dd397b))
 -   working on function documentations
@@ -43,9 +51,11 @@
 #### Other changes
 
 -   updated news.md
+    ([812e2c1](https://github.com/kapsner/kdry/tree/812e2c14227a3e693b012666aa5f836478f77233))
+-   updated news.md
     ([9d40c37](https://github.com/kapsner/kdry/tree/9d40c37759d1ba5ad8b26dd17192c301b2d2d236))
 -   adaptions to new package
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...d9ab512`](https://github.com/kapsner/kdry/compare/41f1eba...d9ab512)
+[`41f1eba...3fb3fb6`](https://github.com/kapsner/kdry/compare/41f1eba...3fb3fb6)

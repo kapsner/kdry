@@ -175,8 +175,8 @@ geom_label_params <- function(
     parse = FALSE,
     nudge_x = 0,
     nudge_y = 0,
-    label.padding = unit(0.25, "lines"), # nolint
-    label.r = unit(0.15, "lines"), # nolint
+    label.padding = ggplot2::unit(0.25, "lines"), # nolint
+    label.r = ggplot2::unit(0.15, "lines"), # nolint
     label.size = 0.25, # nolint
     na.rm = FALSE, # nolint
     show.legend = NA, # nolint

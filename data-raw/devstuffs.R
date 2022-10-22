@@ -35,10 +35,17 @@ my_desc$set("BugReports",
             "https://github.com/kapsner/kdry/issues")
 
 # Vignette Builder
-my_desc$set("VignetteBuilder" = "knitr")
+#my_desc$set("VignetteBuilder" = "knitr")
 
 # License
 my_desc$set("License", "GPL-3")
+
+# Testthat stuff
+my_desc$set("Config/testthat/parallel" = "false")
+my_desc$set("Config/testthat/edition" = "3")
+# Roxygen
+my_desc$set("Roxygen" = "list(markdown = TRUE)")
+
 # Save everyting
 my_desc$write(file = "DESCRIPTION")
 
@@ -57,7 +64,7 @@ usethis::use_package("utils", type = "Imports")
 # Suggests
 usethis::use_package("testthat", type = "Suggests", min_version = "3.0.1")
 usethis::use_package("lintr", type = "Suggests")
-usethis::use_package("knitr", type = "Suggests")
+#usethis::use_package("knitr", type = "Suggests")
 usethis::use_package("ggplot2", type = "Suggests")
 usethis::use_package("parallel", type = "Suggests")
 usethis::use_package("doParallel", type = "Suggests")
