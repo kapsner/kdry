@@ -52,6 +52,10 @@ plt_parallel_coordinates <- function(
       call. = FALSE
     )
   }
+  # https://stackoverflow.com/a/55699352
+  helper <- plt_coordinate_utils()
+  LabelParams <- helper$LabelParams
+  geom_label_params <- helper$geom_label_params
 
   # default color parameters
   color_arg_list <- list(
@@ -161,6 +165,8 @@ plt_parallel_coordinates <- function(
     )
 }
 
+plt_coordinate_utils <- function() {
+
 LabelParams <- ggplot2::ggproto( # nolint
   `_class` = "LabelParams",
   `_inherit` = ggplot2::GeomText
@@ -244,6 +250,8 @@ geom_label_params <- function(
         params = list(na.rm = na.rm, ...),
       )
     })
+}
+  return(list(LabelParams = LabelParams, geom_label_params = geom_label_params))
 }
 
 
