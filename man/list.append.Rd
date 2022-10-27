@@ -9,20 +9,20 @@ list.append(main_list, append_list, ...)
 \arguments{
 \item{main_list}{A list, to which another should be appended.}
 
-\item{append_list}{A list to append to `main_list` (can be `NULL` or empty).}
+\item{append_list}{A list to append to \code{main_list} (can be \code{NULL} or empty).}
 
-\item{...}{Further arguments passed to `utils::modifyList()`.}
+\item{...}{Further arguments passed to \code{utils::modifyList()}.}
 }
 \value{
-A `list` is returned.
+A \code{list} is returned.
 }
 \description{
 Helper function to append an R list.
 }
 \details{
-This function is a save wrapper around `utils::modifyLists` to
-  combine lists as it checks for the input types and only appends the new
-  list if its length is greater than 0.
+This function is a save wrapper around \code{utils::modifyLists} to
+combine lists as it checks for the input types and only appends the new
+list if its length is greater than 0.
 }
 \examples{
 l1 <- list("a" = 1, "b" = 2)
@@ -30,5 +30,5 @@ l2 <- list("c" = 3, "d" = 4)
 list.append(l1, l2)
 }
 \seealso{
-[utils::modifyList()]
+\code{\link[utils:modifyList]{utils::modifyList()}}
 }

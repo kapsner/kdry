@@ -7,17 +7,17 @@
 dtr_matrix2df(matrix, cat_vars = NULL)
 }
 \arguments{
-\item{matrix}{An R `matrix` object.}
+\item{matrix}{An R \code{matrix} object.}
 
 \item{cat_vars}{A character vector with colnames that should be converted to
-`factor` (default: NULL).}
+\code{factor} (default: NULL).}
 }
 \value{
-A `data.table` is returned.
+A \code{data.table} is returned.
 }
 \description{
-Data transformation: Converts a `matrix` to `data.table` and
-  encodes categorical variables as `factor`.
+Data transformation: Converts a \code{matrix} to \code{data.table} and
+encodes categorical variables as \code{factor}.
 }
 \examples{
 data("iris")

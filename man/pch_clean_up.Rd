@@ -7,15 +7,15 @@
 pch_clean_up(cl)
 }
 \arguments{
-\item{cl}{A cluster object of class `c("SOCKcluster", "cluster")`.}
+\item{cl}{A cluster object of class \code{c("SOCKcluster", "cluster")}.}
 }
 \value{
 The function returns nothing. Internally, it calls
-  `parallel::stopCluster()` and `foreach::registerDoSEQ()`.
+\code{parallel::stopCluster()} and \code{foreach::registerDoSEQ()}.
 }
 \description{
 Parallel computing helper function to clean up the parallel
-  backend.
+backend.
 }
 \examples{
 if (require("doParallel") && require("foreach")) {
@@ -24,5 +24,5 @@ if (require("doParallel") && require("foreach")) {
 }
 }
 \seealso{
-[parallel::stopCluster()], [foreach::registerDoSEQ()]
+\code{\link[parallel:makeCluster]{parallel::stopCluster()}}, \code{\link[foreach:registerDoSEQ]{foreach::registerDoSEQ()}}
 }

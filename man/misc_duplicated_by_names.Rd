@@ -9,19 +9,19 @@ misc_duplicated_by_names(object, ...)
 \arguments{
 \item{object}{An R object that has names.}
 
-\item{...}{Named arguments passed on to `duplicated`.}
+\item{...}{Named arguments passed on to \code{duplicated}.}
 }
 \value{
-Returns a logical vector of `length(object)` with `TRUE` indicating
-  the identified items with duplicated names.
+Returns a logical vector of \code{length(object)} with \code{TRUE} indicating
+the identified items with duplicated names.
 }
 \description{
 Miscellaneous helper function to detect items in an object
-  with duplicated names, e.g. in named vectors or named lists.
+with duplicated names, e.g. in named vectors or named lists.
 }
 \examples{
 misc_duplicated_by_names(list(a = 1, a = 1))
 }
 \seealso{
-[base::duplicated()]
+\code{\link[base:duplicated]{base::duplicated()}}
 }

@@ -10,17 +10,17 @@ misc_argument_catcher(...)
 \item{...}{Named arguments passed to a function.}
 }
 \value{
-A `list` is returned.
+A \code{list} is returned.
 }
 \description{
 Miscellaneous helper function to type-save catch arguments
-  passed with R's ellipsis ("...").
+passed with R's ellipsis ("...").
 }
 \details{
 This function aims at catching arguments that have been passed to an
-  R function using R's ellipsis ("..."). Its purpos is to catch these
-  arguments even in the case, if a list with arguments was provided to the
-  ellipsis.
+R function using R's ellipsis ("..."). Its purpos is to catch these
+arguments even in the case, if a list with arguments was provided to the
+ellipsis.
 }
 \examples{
 misc_argument_catcher(a = 1)

@@ -7,18 +7,18 @@
 sts_normalize(x, na.rm = FALSE)
 }
 \arguments{
-\item{x}{A vector of type `numeric`.}
+\item{x}{A vector of type \code{numeric}.}
 
 \item{na.rm}{A logical to indicate, if missings should be removed.}
 }
 \value{
-Returns a vector of same length as `x` with values normalized between
-  zero and one. If `x` contains missings and `na.rm = TRUE`, the missings are
-  removed before normalization; otherwise, a vector of `NA` is returend.
+Returns a vector of same length as \code{x} with values normalized between
+zero and one. If \code{x} contains missings and \code{na.rm = TRUE}, the missings are
+removed before normalization; otherwise, a vector of \code{NA} is returend.
 }
 \description{
 Statistic helper function to normalize a continuous variable
-  between zero and one.
+between zero and one.
 }
 \examples{
 sts_normalize(1:100)

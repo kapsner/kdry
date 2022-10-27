@@ -9,21 +9,21 @@ list.update(main_list, new_list, ...)
 \arguments{
 \item{main_list}{A list, which items should be updated.}
 
-\item{new_list}{A list with new values of items ffrom `main_list` that should
-be updated. All names of `new_list` must be present in `main_list`.}
+\item{new_list}{A list with new values of items ffrom \code{main_list} that should
+be updated. All names of \code{new_list} must be present in \code{main_list}.}
 
-\item{...}{Further arguments passed to `utils::modifyList()`.}
+\item{...}{Further arguments passed to \code{utils::modifyList()}.}
 }
 \value{
-A `list` is returned.
+A \code{list} is returned.
 }
 \description{
 Helper function to update items in an R list.
 }
 \details{
-This function is a save wrapper around `utils::modifyLists` to
-  update items in R lists as it checks for the input types and only accepts
-  named lists.
+This function is a save wrapper around \code{utils::modifyLists} to
+update items in R lists as it checks for the input types and only accepts
+named lists.
 }
 \examples{
 l1 <- list("a" = 1, "b" = 2)
@@ -31,5 +31,5 @@ l2 <- list("a" = 3, "b" = 4)
 list.update(l1, l2)
 }
 \seealso{
-[utils::modifyList()]
+\code{\link[utils:modifyList]{utils::modifyList()}}
 }

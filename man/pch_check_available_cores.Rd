@@ -8,17 +8,17 @@ pch_check_available_cores(ncores = -1L)
 }
 \arguments{
 \item{ncores}{An integer. A number of cores requested for parallel computing
-(default: `-1L`).}
+(default: \code{-1L}).}
 }
 \value{
 The function returns an integer that indicates the number of cores
-  available. If `ncores <= parallel::detectCores()` the function returns
-  `ncores`. If `ncores > parallel::detectCores()`, the function returns
-  `parallel::detectCores() - 1L`.
+available. If \code{ncores <= parallel::detectCores()} the function returns
+\code{ncores}. If \code{ncores > parallel::detectCores()}, the function returns
+\code{parallel::detectCores() - 1L}.
 }
 \description{
 Parallel computing helper function to check for the available
-  cores.
+cores.
 }
 \examples{
 pch_check_available_cores(2)

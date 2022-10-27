@@ -8,15 +8,15 @@ pch_register_parallel(ncores)
 }
 \arguments{
 \item{ncores}{An integer. A number of cores requested for parallel computing
-(default: `-1L`).}
+(default: \code{-1L}).}
 }
 \value{
-The function returns a object of class `c("SOCKcluster", "cluster")`,
-  created with `parallel::makePSOCKcluster()`.
+The function returns a object of class \code{c("SOCKcluster", "cluster")},
+created with \code{parallel::makePSOCKcluster()}.
 }
 \description{
 Parallel computing helper function to register a parallel
-  backend.
+backend.
 }
 \examples{
 if (require("doParallel") && require("foreach")) {
@@ -25,5 +25,5 @@ if (require("doParallel") && require("foreach")) {
 }
 }
 \seealso{
-[parallel::makePSOCKcluster()], [doParallel::registerDoParallel()]
+\code{\link[parallel:makeCluster]{parallel::makePSOCKcluster()}}, \code{\link[doParallel:registerDoParallel]{doParallel::registerDoParallel()}}
 }

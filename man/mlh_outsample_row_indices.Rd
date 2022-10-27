@@ -15,21 +15,21 @@ dataset. This parameter is required in order to compute the out-of-sample
 row indices.}
 
 \item{type}{A character. To be used if the out-of-sample row indices need to
-be formatted in a special manner (default: `NULL`). Currently, the only
-allowed value is `type = "glmnet"` in order to format the row indices as
-required by `glmnet::cv.glmnet`'s argument `foldid`.}
+be formatted in a special manner (default: \code{NULL}). Currently, the only
+allowed value is \code{type = "glmnet"} in order to format the row indices as
+required by \code{glmnet::cv.glmnet}'s argument \code{foldid}.}
 }
 \value{
-If `type = NULL`, returns a list of same length as `fold_list` with
-  each item containing a vector of out-of-sample row indices. If
-  `type = "glmnet"`, a data.table is returned with two columns and each row
-  representing one observation of the dataset that is assigned to a specific
-  test fold. The column "fold_id" should be passed further on to the argument
-  `foldid` of `glmnet::cv.glmnet`.
+If \code{type = NULL}, returns a list of same length as \code{fold_list} with
+each item containing a vector of out-of-sample row indices. If
+\code{type = "glmnet"}, a data.table is returned with two columns and each row
+representing one observation of the dataset that is assigned to a specific
+test fold. The column "fold_id" should be passed further on to the argument
+\code{foldid} of \code{glmnet::cv.glmnet}.
 }
 \description{
 Machine learning helper function to convert a vector of (in-
-  sample) row indices of a fold into out-of-sample row indices.
+sample) row indices of a fold into out-of-sample row indices.
 }
 \examples{
 fold_list <- list(

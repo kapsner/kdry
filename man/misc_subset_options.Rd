@@ -10,16 +10,16 @@ misc_subset_options(keyword)
 \item{keyword}{A character. The keyword to subset the R options.}
 }
 \value{
-A `list` is returned, containing the subset of R's `options()` that
-  matches with the `keyword`.
+A \code{list} is returned, containing the subset of R's \code{options()} that
+matches with the \code{keyword}.
 }
 \description{
 Miscellaneous helper function to subset R options by a keyword.
 }
 \details{
-This function subsets R's `options()` by a keyword. It returns a
-  list of all available options that match with the `keyword`. The `keyword`
-  is evaluated as a regular expression.
+This function subsets R's \code{options()} by a keyword. It returns a
+list of all available options that match with the \code{keyword}. The \code{keyword}
+is evaluated as a regular expression.
 }
 \examples{
 misc_subset_options("default")

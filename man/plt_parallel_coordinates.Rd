@@ -18,35 +18,35 @@ plt_parallel_coordinates(
 \item{data}{A data.table object with the columns containing the parameters to
 be plotted with the parallel coordinates plot.}
 
-\item{cols}{A character vector with column names to subset `data` (default:
-`NULL`).}
+\item{cols}{A character vector with column names to subset \code{data} (default:
+\code{NULL}).}
 
 \item{color_variable}{A character. The name of the column to be used to
-colorize the lines of the plot (default: `NULL`).}
+colorize the lines of the plot (default: \code{NULL}).}
 
 \item{color_args}{A list with parameters for the color gradient (see
 details).}
 
-\item{line_jitter}{A list with the elements `w` and `h` to define a line
-jitter (default: `list(w = 0.04, h = 0.04)`), which are passed further on
-to define the position of `ggplot2::geom_line()`.}
+\item{line_jitter}{A list with the elements \code{w} and \code{h} to define a line
+jitter (default: \code{list(w = 0.04, h = 0.04)}), which are passed further on
+to define the position of \code{ggplot2::geom_line()}.}
 
 \item{text_label_size}{A numeric value to define the size of the text
-annotations (default: `3.5`).}
+annotations (default: \code{3.5}).}
 }
 \value{
-Returns a parallel coordinates plot as `ggplot2` object.
+Returns a parallel coordinates plot as \code{ggplot2} object.
 }
 \description{
 Parallel coordinates plot
 }
 \details{
 The color gradient of the plotted lines can be defined with a list
-  provided to the argument `color_args`. Its default values are
-  `alpha = 0.6`, `begin = .1`, `end = .9`, `option = "inferno"`, and
-  `direction = 1` and are passed furhter on to
-  `ggplot2::scale_color_viridis_c()`.
-  The implementation to display categorical variables is still experimental.
+provided to the argument \code{color_args}. Its default values are
+\code{alpha = 0.6}, \code{begin = .1}, \code{end = .9}, \code{option = "inferno"}, and
+\code{direction = 1} and are passed furhter on to
+\code{ggplot2::scale_color_viridis_c()}.
+The implementation to display categorical variables is still experimental.
 }
 \examples{
 if (require("ggplot2")) {
@@ -55,5 +55,5 @@ if (require("ggplot2")) {
 }
 }
 \seealso{
-[ggplot2::scale_color_viridis_c()]
+\code{\link[ggplot2:scale_viridis]{ggplot2::scale_color_viridis_c()}}
 }
