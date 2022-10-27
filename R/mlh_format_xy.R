@@ -16,10 +16,11 @@
 #' @export
 #'
 mlh_format_xy <- function(object, ids) {
-  stopifnot(is.integer(ids), is.matrix(object) || is.data.frame(object))
+  stopifnot(is.integer(ids))
   if (is.null(dim(object)) && is.atomic(object)) {
     return(object[ids])
   } else {
+    stopifnot(is.matrix(object) || is.data.frame(object))
     return(object[ids, ])
   }
 }
