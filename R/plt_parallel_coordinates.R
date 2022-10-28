@@ -167,12 +167,12 @@ plt_parallel_coordinates <- function(
 
 plt_coordinate_utils <- function() {
 
-LabelParams <- ggplot2::ggproto( # nolint
-  `_class` = "LabelParams",
-  `_inherit` = ggplot2::GeomText
-)
+  LabelParams <- ggplot2::ggproto( # nolint
+    `_class` = "LabelParams",
+    `_inherit` = ggplot2::GeomText
+  )
 
-geom_label_params <- function(
+  geom_label_params <- function(
     data = NULL,
     stat = "identity",
     col_pos_vec = NULL,
@@ -187,70 +187,70 @@ geom_label_params <- function(
     na.rm = FALSE, # nolint
     show.legend = NA, # nolint
     inherit.aes = FALSE # nolint
-) {
+  ) {
 
-  # character / factor to integer
-  data <- cat2integer(data)
+    # character / factor to integer
+    data <- cat2integer(data)
 
-  lapply(
-    X = seq_len(length(col_pos_vec)),
-    FUN = function(x) {
-      colpos <- col_pos_vec[x]
-      xpos <- x
-      col_name <- colnames(data)[colpos]
-      uniq_vals <- unique(data[, get(col_name)])
+    lapply(
+      X = seq_len(length(col_pos_vec)),
+      FUN = function(x) {
+        colpos <- col_pos_vec[x]
+        xpos <- x
+        col_name <- colnames(data)[colpos]
+        uniq_vals <- unique(data[, get(col_name)])
 
-      plt_dat <- data.table::data.table(
-        "original_values" = data[, get(col_name)],
-        "normalized_values" = sts_normalize(data[, get(col_name)])
-      )
-
-      plt_dat <- plt_dat[, lapply(.SD, round, digits = 2)]
-      # heuristic: always display 6 values
-      if (length(uniq_vals) > 10) {
-        new_breaks <- seq(
-          from = plt_dat[, min(get("original_values"))],
-          to = plt_dat[, max(get("original_values"))],
-          length.out = 6
+        plt_dat <- data.table::data.table(
+          "original_values" = data[, get(col_name)],
+          "normalized_values" = sts_normalize(data[, get(col_name)])
         )
 
-        # get row indices of best matching values
-        rids <- sapply(
-          X = new_breaks,
-          FUN = function(x) {
-            which.min(abs(plt_dat[, get("original_values")] - x))
-          },
-          USE.NAMES = FALSE
+        plt_dat <- plt_dat[, lapply(.SD, round, digits = 2)]
+        # heuristic: always display 6 values
+        if (length(uniq_vals) > 10) {
+          new_breaks <- seq(
+            from = plt_dat[, min(get("original_values"))],
+            to = plt_dat[, max(get("original_values"))],
+            length.out = 6
+          )
+
+          # get row indices of best matching values
+          rids <- sapply(
+            X = new_breaks,
+            FUN = function(x) {
+              which.min(abs(plt_dat[, get("original_values")] - x))
+            },
+            USE.NAMES = FALSE
+          )
+
+          plt_dat[
+            rids,
+            ("label_annot") := as.character(get("original_values"))
+          ]
+        } else {
+          plt_dat[
+            ,
+            ("label_annot") := as.character(get("original_values"))
+          ]
+        }
+
+        mapping <- ggplot2::aes(
+          x = xpos,
+          y = eval(parse(text = "normalized_values")),
+          label = eval(parse(text = "label_annot"))
         )
-
-        plt_dat[
-          rids,
-          ("label_annot") := as.character(get("original_values"))
-        ]
-      } else {
-        plt_dat[
-          ,
-          ("label_annot") := as.character(get("original_values"))
-        ]
-      }
-
-      mapping <- ggplot2::aes(
-        x = xpos,
-        y = eval(parse(text = "normalized_values")),
-        label = eval(parse(text = "label_annot"))
-      )
-      ggplot2::layer(
-        data = plt_dat,
-        stat = stat,
-        mapping = mapping,
-        geom = "text",
-        position = position,
-        show.legend = show.legend,
-        inherit.aes = inherit.aes,
-        params = list(na.rm = na.rm, ...),
-      )
-    })
-}
+        ggplot2::layer(
+          data = plt_dat,
+          stat = stat,
+          mapping = mapping,
+          geom = "text",
+          position = position,
+          show.legend = show.legend,
+          inherit.aes = inherit.aes,
+          params = list(na.rm = na.rm, ...),
+        )
+      })
+  }
   return(list(LabelParams = LabelParams, geom_label_params = geom_label_params))
 }
 

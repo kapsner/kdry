@@ -16,3 +16,19 @@ test_that(
     expect_true(nrow(l2) == 100)
   }
 )
+
+test_that(
+  desc = "test mlh - mlh_subset",
+  code = {
+
+    data("iris")
+    d1 <- mlh_subset(iris, c(1:30))
+    expect_equal(dim(d1), c(30, 5))
+    d2 <- mlh_subset(iris[, 5], c(1:30))
+    expect_true(is.atomic(d2))
+    expect_length(d2, 30)
+
+    expect_error(mlh_subset(iris, c(TRUE, TRUE, FALSE)))
+    expect_error(mlh_subset(list(), c(1:30)))
+  }
+)
