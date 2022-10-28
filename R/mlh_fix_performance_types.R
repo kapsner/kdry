@@ -7,7 +7,10 @@ mlh_fix_performance_types <- function(FUN, y, perf_args) {
     expr = {
       return(do.call(FUN, perf_args))
     }, error = function(e) {
-      lvls <- levels(factor(y))
+      if (!is.factor(y)) {
+        y <- factor(y)
+      }
+      lvls <- levels(y)
       error <- TRUE
       if (grepl(
         pattern = "Assertion on 'truth' failed: Must be of type 'factor'",
