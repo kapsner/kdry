@@ -20,7 +20,10 @@ mlh_subset <- function(object, ids) {
   if (is.null(dim(object)) && is.atomic(object)) {
     return(object[ids])
   } else {
-    stopifnot(inherits(object, "matrix") || inherits(object, "data.frame"))
+    stopifnot(
+      inherits(object, "matrix") || inherits(object, "data.frame") ||
+        inherits(object, "Surv")
+    )
     return(object[ids, ])
   }
 }
