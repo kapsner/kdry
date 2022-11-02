@@ -54,7 +54,7 @@ plt_parallel_coordinates <- function(
   }
   # https://stackoverflow.com/a/55699352
   helper <- plt_coordinate_utils()
-  LabelParams <- helper$LabelParams
+  LabelParams <- helper$LabelParams # nolint
   geom_label_params <- helper$geom_label_params
 
   # default color parameters

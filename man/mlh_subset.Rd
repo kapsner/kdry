@@ -7,7 +7,8 @@
 mlh_subset(object, ids)
 }
 \arguments{
-\item{object}{A vector or a data matrix.}
+\item{object}{A vector or a data matrix. Supports also subsetting of "Surv"
+objects.}
 
 \item{ids}{An integer vector specifying the indices that should be selected
 from the object.}

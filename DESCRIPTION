@@ -22,10 +22,11 @@ Suggests:
     ggplot2,
     lintr,
     parallel,
+    survival,
     testthat (>= 3.0.1)
 Config/testthat/edition: 3
 Config/testthat/parallel: false
-Date/Publication: 2022-10-22 05:44:29 UTC
+Date/Publication: 2022-11-02 18:31:04 UTC
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1

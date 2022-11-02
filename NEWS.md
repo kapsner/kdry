@@ -1,9 +1,19 @@
 # kdry NEWS
 
-## Unreleased (2022-10-21)
+## Unreleased (2022-10-28)
+
+#### Breaking changes
+
+-   rename to mlh\_subset
+    ([72f90d4](https://github.com/kapsner/kdry/tree/72f90d4d8ef5a2cc8bcd88fac9a1fa644203781f))
 
 #### New features
 
+-   added function to fix data types for calculating performance
+    measures
+    ([215615d](https://github.com/kapsner/kdry/tree/215615def900d10b46aff9b722a6bd8dfbe28efa))
+-   added format\_xy
+    ([18b0e37](https://github.com/kapsner/kdry/tree/18b0e37e3df2eaaee2caf17553781cd5059a4e96))
 -   added list.update
     ([03031a1](https://github.com/kapsner/kdry/tree/03031a16807bbad308f405aebb44d13679148ee6))
 -   added check for available cores
@@ -21,6 +31,12 @@
 
 #### Bug fixes
 
+-   also allowing surv objects in mlh\_subset
+    ([4791339](https://github.com/kapsner/kdry/tree/479133999030b58508d2cab461d45ac5e723b985))
+-   fixed stopifnot in format\_xy
+    ([e726ab2](https://github.com/kapsner/kdry/tree/e726ab2339990172fb6f0ba52e7d4f5e5fd58a62))
+-   fix namespace errors with ggplot2
+    ([bdbe373](https://github.com/kapsner/kdry/tree/bdbe37380e4a9691ec23a11cb77c217921d6ac1d))
 -   fixed logic for returning out-sample ids
     ([28cc902](https://github.com/kapsner/kdry/tree/28cc902e7967fba95a831fa69a143a7f439669a5))
 -   removed wronge pkg name
@@ -28,6 +44,10 @@
 
 #### Refactorings
 
+-   removed mlh\_fix\_performance\_types
+    ([c671a09](https://github.com/kapsner/kdry/tree/c671a09eaf898ebb3169de18d53e444d7b262106))
+-   only converting non-factors if necessary
+    ([a00b747](https://github.com/kapsner/kdry/tree/a00b7473d2f34f9a3b82c3e39f6522dc41b8b610))
 -   refactored argument catcher
     ([0124672](https://github.com/kapsner/kdry/tree/01246724d47d1b123323b95167c459501d7104e2))
 
@@ -50,6 +70,10 @@
 
 #### Other changes
 
+-   updated documentation
+    ([fb7036d](https://github.com/kapsner/kdry/tree/fb7036d5f280c64146a21b1cde4ee51ce4a2721a))
+-   updated description and news
+    ([b41ca14](https://github.com/kapsner/kdry/tree/b41ca14c7b75f8bed2e60bdb4d0b39b0b88d85b0))
 -   updated news.md
     ([812e2c1](https://github.com/kapsner/kdry/tree/812e2c14227a3e693b012666aa5f836478f77233))
 -   updated news.md
@@ -58,4 +82,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...3fb3fb6`](https://github.com/kapsner/kdry/compare/41f1eba...3fb3fb6)
+[`41f1eba...4791339`](https://github.com/kapsner/kdry/compare/41f1eba...4791339)
