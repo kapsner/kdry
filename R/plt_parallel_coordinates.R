@@ -30,7 +30,11 @@
 #' @examples
 #' if (require("ggplot2")) {
 #'   data("iris")
-#'   plt_parallel_coordinates(data.table::as.data.table(iris[, -5]))
+#'   plt_parallel_coordinates(
+#'     data = data.table::as.data.table(iris[, -5]),
+#'     cols = colnames(iris)[c(-1, -5)],
+#'     color_variable = "Sepal.Length"
+#'   )
 #' }
 #' @export
 #
@@ -107,6 +111,7 @@ plt_parallel_coordinates <- function(
   num_vars <- colnames(data_copy)[
     data_copy[, vapply(.SD, is.numeric, logical(1L))]
   ]
+  num_vars <- setdiff(num_vars, color_variable)
   data_copy[
     ,
     (num_vars) := lapply(
