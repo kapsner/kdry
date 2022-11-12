@@ -60,15 +60,15 @@ usethis::use_package("R", min_version = "2.10", type = "Depends")
 usethis::use_package("data.table", type = "Imports")
 usethis::use_package("magrittr", type = "Imports")
 usethis::use_package("utils", type = "Imports")
+usethis::use_package("parallel", type = "Imports")
+usethis::use_package("doParallel", type = "Imports")
+usethis::use_package("foreach", type = "Imports")
 
 # Suggests
 usethis::use_package("testthat", type = "Suggests", min_version = "3.0.1")
 usethis::use_package("lintr", type = "Suggests")
 #usethis::use_package("knitr", type = "Suggests")
 usethis::use_package("ggplot2", type = "Suggests")
-usethis::use_package("parallel", type = "Suggests")
-usethis::use_package("doParallel", type = "Suggests")
-usethis::use_package("foreach", type = "Suggests")
 usethis::use_package("survival", type = "Suggests")
 
 

@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2022-10-28)
+## Unreleased (2022-11-10)
 
 #### Breaking changes
 
@@ -9,6 +9,8 @@
 
 #### New features
 
+-   added mlh\_reshape
+    ([e1e835d](https://github.com/kapsner/kdry/tree/e1e835d5ff19aac34145d1abd5f70801bd5a4ddb))
 -   added function to fix data types for calculating performance
     measures
     ([215615d](https://github.com/kapsner/kdry/tree/215615def900d10b46aff9b722a6bd8dfbe28efa))
@@ -31,6 +33,8 @@
 
 #### Bug fixes
 
+-   removed scaling of color\_var
+    ([3ce00bc](https://github.com/kapsner/kdry/tree/3ce00bc58ba3847c567554c0835f63ba3958d61c))
 -   also allowing surv objects in mlh\_subset
     ([4791339](https://github.com/kapsner/kdry/tree/479133999030b58508d2cab461d45ac5e723b985))
 -   fixed stopifnot in format\_xy
@@ -82,4 +86,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...4791339`](https://github.com/kapsner/kdry/compare/41f1eba...4791339)
+[`41f1eba...3ce00bc`](https://github.com/kapsner/kdry/compare/41f1eba...3ce00bc)

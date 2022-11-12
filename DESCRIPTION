@@ -14,19 +14,19 @@ Depends:
     R (>= 2.10)
 Imports: 
     data.table,
-    magrittr,
-    utils
-Suggests: 
     doParallel,
     foreach,
+    magrittr,
+    parallel,
+    utils
+Suggests: 
     ggplot2,
     lintr,
-    parallel,
     survival,
     testthat (>= 3.0.1)
 Config/testthat/edition: 3
 Config/testthat/parallel: false
-Date/Publication: 2022-11-02 18:31:04 UTC
+Date/Publication: 2022-11-12 16:00:27 UTC
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
