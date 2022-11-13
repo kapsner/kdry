@@ -16,15 +16,6 @@
 #' @export
 #
 pch_check_available_cores <- function(ncores = -1L) {
-  if (!requireNamespace("parallel", quietly = TRUE)) {
-    stop(
-      paste0(
-        "Package \"parallel\" must be installed to use ",
-        "\"pch_register_parallel\"."
-      ),
-      call. = FALSE
-    )
-  }
   stopifnot(is.integer(as.integer(ncores)))
   ncores <- as.integer(ncores)
   available_cores <- parallel::detectCores()
