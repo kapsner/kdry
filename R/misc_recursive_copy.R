@@ -13,7 +13,7 @@
 #' }
 #' @export
 #'
-misc_recursive_copy <- function(source_dir, new_dir_base) {
+misc_recursive_copy <- function(source_dir, target_dir) {
   cur_files <- list.files(
     path = source_dir,
     all.files = FALSE,
@@ -21,11 +21,11 @@ misc_recursive_copy <- function(source_dir, new_dir_base) {
   )
   for (f in cur_files) {
     fn_old <- file.path(source_dir, f)
-    fn_new <- file.path(new_dir_base, f)
+    fn_new <- file.path(target_dir, f)
     fi <- file.info(fn_old)
     if (fi$isdir) {
       dir.create(fn_new, recursive = TRUE)
-      misc_recursive_copy(source_dir = fn_old, new_dir_base = fn_new)
+      misc_recursive_copy(source_dir = fn_old, target_dir = fn_new)
     } else {
       file.copy(from = fn_old, to = fn_new)
     }

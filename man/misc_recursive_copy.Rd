@@ -4,7 +4,7 @@
 \alias{misc_recursive_copy}
 \title{misc_recursive_copy}
 \usage{
-misc_recursive_copy(source_dir, new_dir_base)
+misc_recursive_copy(source_dir, target_dir)
 }
 \arguments{
 \item{source_dir}{A character string. The path to the directory to be copied.}
