@@ -56,3 +56,22 @@ test_that(
     expect_type(l1, "list")
   }
 )
+
+
+test_that(
+  desc = "test misc - misc_subset_options",
+  code = {
+
+    d1 <- file.path(tempdir(), "folder1")
+    d2 <- file.path(d1, "folder2")
+    d3 <- file.path(tempdir(), "new_folder")
+    f1 <- file.path(d1, "file.one")
+    dir.create(d2, recursive = TRUE)
+    file.create(f1)
+    misc_recursive_copy(d1, d3, force = TRUE)
+
+    # clean up#
+    unlink(d1, recursive = TRUE)
+    unlink(d3, recursive = TRUE)
+  }
+)

@@ -4,12 +4,17 @@
 \alias{misc_recursive_copy}
 \title{misc_recursive_copy}
 \usage{
-misc_recursive_copy(source_dir, target_dir)
+misc_recursive_copy(source_dir, target_dir, force = FALSE)
 }
 \arguments{
 \item{source_dir}{A character string. The path to the directory to be copied.}
 
 \item{target_dir}{A character string. The target path.}
+
+\item{force}{A boolean. If \code{FALSE} (the default) a dialog is prompted to
+ask the user if the directories should be copied recursively. If \code{TRUE},
+the dialog is not prompted and the \code{source_dir} is copied directly to
+\code{target_dir}.}
 }
 \value{
 This function has no return value.
@@ -18,7 +23,13 @@ This function has no return value.
 Recursively copying directories and subdirectories.
 }
 \examples{
-\donotrun{
-  misc_recursive_copy("/tmp/folder", "/tmp/new_folder/")
+if (interactive()) {
+  d1 <- file.path(tempdir(), "folder1")
+  d2 <- file.path(d1, "folder2")
+  d3 <- file.path(tempdir(), "new_folder")
+  f1 <- file.path(d1, "file.one")
+  dir.create(d2, recursive = TRUE)
+  file.create(f1)
+  misc_recursive_copy(d1, d3)
 }
 }

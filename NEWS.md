@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2022-11-10)
+## Unreleased (2022-12-21)
 
 #### Breaking changes
 
@@ -33,6 +33,8 @@
 
 #### Bug fixes
 
+-   fixed argument name of recursive\_copy
+    ([cecbec2](https://github.com/kapsner/kdry/tree/cecbec26ed1d87be0d3bfc60b52893e56e33c6e5))
 -   removed scaling of color\_var
     ([3ce00bc](https://github.com/kapsner/kdry/tree/3ce00bc58ba3847c567554c0835f63ba3958d61c))
 -   also allowing surv objects in mlh\_subset
@@ -48,6 +50,12 @@
 
 #### Refactorings
 
+-   removed unnecessary pkg ns check 3
+    ([7e47eb4](https://github.com/kapsner/kdry/tree/7e47eb4c3deb0c19b2452b24d9b6ed22d8271099))
+-   removed unnecessary pkg ns check 2
+    ([eb261ae](https://github.com/kapsner/kdry/tree/eb261ae7ba37a9ff100c54ed087efa6ac9603009))
+-   removed unnecessary pkg ns check
+    ([4b06602](https://github.com/kapsner/kdry/tree/4b06602d3168e4061ec7afe31c1065729ede7eb3))
 -   removed mlh\_fix\_performance\_types
     ([c671a09](https://github.com/kapsner/kdry/tree/c671a09eaf898ebb3169de18d53e444d7b262106))
 -   only converting non-factors if necessary
@@ -74,6 +82,10 @@
 
 #### Other changes
 
+-   added recursive copying function
+    ([b056879](https://github.com/kapsner/kdry/tree/b0568790248f82c087046adb3bfe885a3aed69f0))
+-   doparallel and foreach to imports
+    ([d350672](https://github.com/kapsner/kdry/tree/d35067255518671e2e2d1347410bfde182e2ebaf))
 -   updated documentation
     ([fb7036d](https://github.com/kapsner/kdry/tree/fb7036d5f280c64146a21b1cde4ee51ce4a2721a))
 -   updated description and news
@@ -86,4 +98,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...3ce00bc`](https://github.com/kapsner/kdry/compare/41f1eba...3ce00bc)
+[`41f1eba...cecbec2`](https://github.com/kapsner/kdry/compare/41f1eba...cecbec2)
