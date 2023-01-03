@@ -1,14 +1,12 @@
 # rep_distribution_meta helper
 rep_distribution_meta <- function(central_tendency,
                                   dispersion,
-                                  digits = 2L,
                                   na.rm = TRUE,
                                   prefix,
+                                  suffix,
                                   brackets = c("round", "square")
 ) {
   stopifnot(
-    is.logical(na.rm),
-    is.integer(as.integer(digits)),
     is.character(prefix)
   )
   brackets <- match.arg(brackets)
@@ -16,7 +14,7 @@ rep_distribution_meta <- function(central_tendency,
 
   format_out <- paste0(
     central_tendency, " ",
-    solved_brackets[1], prefix, dispersion, solved_brackets[2]
+    solved_brackets[1], prefix, dispersion, suffix, solved_brackets[2]
   )
   return(format_out)
 }

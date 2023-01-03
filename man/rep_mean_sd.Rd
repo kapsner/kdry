@@ -9,7 +9,9 @@ rep_mean_sd(
   digits = 2,
   na.rm = TRUE,
   sd_brackets = c("round", "square"),
-  sd_prefix = TRUE
+  sd_prefix = TRUE,
+  weighted = FALSE,
+  weights = NA
 )
 }
 \description{

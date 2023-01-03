@@ -14,8 +14,11 @@ rep_mean_sd <- function(x,
                         digits = 2,
                         na.rm = TRUE,
                         sd_brackets = c("round", "square"),
-                        sd_prefix = TRUE
+                        sd_prefix = TRUE,
+                        weighted = FALSE,
+                        weights = NA
 ) {
+  stopifnot(is.logical(weighted), ifelse(weighted, is.vector(weights), TRUE))
   if (isTRUE(sd_prefix)) {
     sd_prefix <- "\u00B1"
   } else {
@@ -23,21 +26,29 @@ rep_mean_sd <- function(x,
   }
 
   # SD
-  sd <- stats::sd(x = x, na.rm = na.rm) %>%
-    round(digits = digits) %>%
-    format(nsmall = digits, trim = TRUE)
+  if (isFALSE(weighted)) {
+    sd <- stats::sd(x = x, na.rm = na.rm) %>%
+      round(digits = digits) %>%
+      format(nsmall = digits, trim = TRUE)
+  } else {
+    sd <- Hmisc::wtd.var(x = x, weights = weights, na.rm = na.rm) %>%
+      sqrt()
+  }
   # Mean
-  mea <- mean(x, na.rm = TRUE) %>%
-    round(digits = digits) %>%
-    format(nsmall = digits, trim = TRUE) %>%
-    remove_all_zero_digits_after_dec()
+  if (isFALSE(weighted)) {
+    mea <- mean(x, na.rm = TRUE) %>%
+      round(digits = digits) %>%
+      format(nsmall = digits, trim = TRUE)
+  } else {
+    mea <- weighted.mean(x = x, w = weights, na.rm = na.rm)
+  }
 
   return(rep_distribution_meta(
     central_tendency = mea,
     dispersion = sd,
-    digits = digits,
     na.rm = na.rm,
     prefix = sd_prefix,
+    suffix = "",
     brackets = sd_brackets
   ))
 }

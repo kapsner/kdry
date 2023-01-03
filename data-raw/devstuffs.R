@@ -63,6 +63,7 @@ usethis::use_package("utils", type = "Imports")
 usethis::use_package("parallel", type = "Imports")
 usethis::use_package("doParallel", type = "Imports")
 usethis::use_package("foreach", type = "Imports")
+usethis::use_package("Hmisc", type = "Imports")
 
 # Suggests
 usethis::use_package("testthat", type = "Suggests", min_version = "3.0.1")
