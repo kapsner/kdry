@@ -17,7 +17,7 @@ This R package provides a collection of helper functions and code snippets to av
 | pch_   | Parallel computing helper functions |
 | misc_  | Miscellaneous functions |
 | plt_   | Plots|
-| sts_ | Statistical helper functions |
+| sts_   | Statistical helper functions |
 
 ## Installation
 
