@@ -1,4 +1,25 @@
-#' rep_median_ci
+#' @title rep_median_ci
+#'
+#' @description Reporting helper function: computes and formats median and
+#'   confidence interval from a numeric vector.
+#'
+#' @param conf_int A numeric between 0 and 100 to indicate the confidence
+#'   interval that should be computed.
+#' @param collapse A character which is placed between the lower and the upper
+#'   confidence bound in the formatted output.
+#' @param iqr_brackets A character. Either `"round"` (default) or `"square"` to
+#'   indicate the type of brackets to surround the confidence interval in the
+#'   formatted output.
+#' @param iqr_prefix A logical. If `TRUE` (default), the confidence interval is
+#'   prefixed with `"IQR: "`.
+#' @param weighted A logical. If `TRUE`, a weighted median and confidence
+#'   interval are calculated (default: `FALSE`).
+#'
+#' @inheritParams rep_mean_sd
+#'
+#' @return A character with the formatted output.
+#'
+#' @seealso [stats::median], [stats::quantile], [Hmisc::wtd.quantile()]
 #'
 #' @examples
 #' set.seed(123)
@@ -9,11 +30,10 @@
 #' rep_median_ci(x, iqr_brackets = "square", conf_int = 50)
 #'
 #' @export
-# median/ci-wrapper
 rep_median_ci <- function(x,
                           conf_int,
                           digits = 2,
-                          na.rm = TRUE,
+                          na.rm = TRUE, # nolint
                           collapse = "to",
                           iqr_brackets = c("round", "square"),
                           iqr_prefix = TRUE,
@@ -21,8 +41,10 @@ rep_median_ci <- function(x,
                           weights = NA
 ) {
   stopifnot(
+    length(conf_int) == 1,
+    is.numeric(x),
     is.character(collapse),
-    conf_int > 1 && conf_int < 100,
+    conf_int > 0 && conf_int < 100,
     is.logical(weighted), ifelse(weighted, is.vector(weights), TRUE)
   )
   if (isTRUE(iqr_prefix)) {
@@ -65,7 +87,9 @@ rep_median_ci <- function(x,
       weights = weights,
       probs = c(ci_lower, 0.5, ci_upper),
       na.rm = na.rm
-    )
+    ) %>%
+      round(digits = digits) %>%
+      format(nsmall = digits, trim = TRUE)
     stopifnot(length(wt_quantiles) == 3)
     qa <- c(wt_quantiles[1], wt_quantiles[3])
     med <- wt_quantiles[2]

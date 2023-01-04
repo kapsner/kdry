@@ -1,4 +1,16 @@
-#' rep_median_iqr
+#' @title rep_median_iqr
+#'
+#' @description Reporting helper function: computes and formats median and
+#'   interquartile range from a numeric vector.
+#'
+#' @details This is just a special case of [rep_median_ci()] with the parameter
+#'   `conf_int` set to `50`.
+#'
+#' @inheritParams rep_median_ci
+#'
+#' @return A character with the formatted output.
+#'
+#' @seealso [rep_median_ci()]
 #'
 #' @examples
 #' set.seed(123)
@@ -14,7 +26,7 @@
 # median/iqr-wrapper (special case of rep-median-ci)
 rep_median_iqr <- function(x,
                            digits = 2,
-                           na.rm = TRUE,
+                           na.rm = TRUE, # nolint
                            collapse = "to",
                            iqr_brackets = c("round", "square"),
                            iqr_prefix = TRUE

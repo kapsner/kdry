@@ -14,8 +14,33 @@ rep_mean_sd(
   weights = NA
 )
 }
+\arguments{
+\item{x}{A numeric vector.}
+
+\item{digits}{An integer indicating the number of decimal places.}
+
+\item{na.rm}{A logical indicating if missings should be removed from \code{x}
+before computing the distributional parameters (default: \code{TRUE}).}
+
+\item{sd_brackets}{A character. Either \code{"round"} (default) or \code{"square"} to
+indicate the type of brackets to surround the standard deviation in the
+formatted output.}
+
+\item{sd_prefix}{A logical. If \code{TRUE} (default), the standard deviation is
+prefixed with a plus-minus-sign ("±").}
+
+\item{weighted}{A logical. If \code{TRUE}, a weighted mean and standard deviation
+are calculated (default: \code{FALSE}).}
+
+\item{weights}{A vector with the weights (if \code{weighted = TRUE};
+default: \code{NA})}
+}
+\value{
+A character with the formatted output.
+}
 \description{
-rep_mean_sd
+Reporting helper function: computes and formats mean and
+standard deviation from a numeric vector.
 }
 \examples{
 set.seed(123)
@@ -25,4 +50,8 @@ rep_mean_sd(rep(1, 10))
 rep_mean_sd(x, sd_brackets = "square")
 rep_mean_sd(x, sd_brackets = "square", sd_prefix = FALSE)
 
+}
+\seealso{
+\code{\link[=mean]{mean()}}, \code{\link[stats:sd]{stats::sd()}}, \code{\link[stats:weighted.mean]{stats::weighted.mean()}},
+\code{\link[Hmisc:wtd.stats]{Hmisc::wtd.var()}}
 }

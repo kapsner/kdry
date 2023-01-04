@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2022-12-21)
+## Unreleased (2023-01-03)
 
 #### Breaking changes
 
@@ -9,6 +9,10 @@
 
 #### New features
 
+-   added more reporting tools
+    ([bfea7aa](https://github.com/kapsner/kdry/tree/bfea7aabbbac446f5baf2c74d5a599fd71e96964))
+-   started adding reporting utilities
+    ([75c0289](https://github.com/kapsner/kdry/tree/75c028947289c5824641522cb70e327a5293c498))
 -   added mlh\_reshape
     ([e1e835d](https://github.com/kapsner/kdry/tree/e1e835d5ff19aac34145d1abd5f70801bd5a4ddb))
 -   added function to fix data types for calculating performance
@@ -50,6 +54,8 @@
 
 #### Refactorings
 
+-   added interactivity to recursive copying
+    ([775fafe](https://github.com/kapsner/kdry/tree/775fafe48976b946586db88518ccc57691c9acb3))
 -   removed unnecessary pkg ns check 3
     ([7e47eb4](https://github.com/kapsner/kdry/tree/7e47eb4c3deb0c19b2452b24d9b6ed22d8271099))
 -   removed unnecessary pkg ns check 2
@@ -98,4 +104,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...cecbec2`](https://github.com/kapsner/kdry/compare/41f1eba...cecbec2)
+[`41f1eba...bfea7aa`](https://github.com/kapsner/kdry/compare/41f1eba...bfea7aa)

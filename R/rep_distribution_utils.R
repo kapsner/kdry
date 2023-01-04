@@ -1,7 +1,7 @@
 # rep_distribution_meta helper
 rep_distribution_meta <- function(central_tendency,
                                   dispersion,
-                                  na.rm = TRUE,
+                                  na.rm = TRUE, # nolint
                                   prefix,
                                   suffix,
                                   brackets = c("round", "square")
@@ -20,10 +20,10 @@ rep_distribution_meta <- function(central_tendency,
 }
 
 # remove digits after decimal point if all zero
-remove_all_zero_digits_after_dec <- function(x) {
+remove_all_zero_digits_after_dec <- function(x) { # nolint
   stopifnot(is.character(x))
   # recognize empty digits on right of decimal point
-  empty_digit_pattern = paste0("\\", options("OutDec"), "0+$")
+  empty_digit_pattern <- paste0("\\", options("OutDec"), "0+$")
   if (grepl(pattern = empty_digit_pattern, x = x)) {
     x <- gsub(pattern = empty_digit_pattern, replacement = "", x = x)
   }

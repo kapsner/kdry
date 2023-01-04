@@ -138,19 +138,21 @@ plt_parallel_coordinates <- function(
 
   data_copy %>%
     ggplot2::ggplot(
-      ggplot2::aes_string(
-        x = "variable",
-        y = "value",
-        color = color_variable)
+      ggplot2::aes(
+        x = get("variable"),
+        y = get("value"),
+        color = get(color_variable)
+      )
     ) +
     ggplot2::geom_line(
-      ggplot2::aes_string(group = "id"),
+      ggplot2::aes(group = get("id")),
       position = ggplot2::position_jitter(
         w = line_jitter_list[["w"]],
         h = line_jitter_list[["h"]]
       )
     ) +
     ggplot2::scale_color_viridis_c(
+      name = color_variable,
       option = color_arg_list$option,
       alpha = color_arg_list$alpha,
       begin = color_arg_list$begin,

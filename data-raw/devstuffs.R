@@ -19,7 +19,7 @@ my_desc$set_authors(c(
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
-my_desc$set_version("0.0.0.9002")
+my_desc$set_version("0.0.0.9003")
 # The title of your package
 my_desc$set(Title = "Kapsner's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
@@ -64,6 +64,7 @@ usethis::use_package("parallel", type = "Imports")
 usethis::use_package("doParallel", type = "Imports")
 usethis::use_package("foreach", type = "Imports")
 usethis::use_package("Hmisc", type = "Imports")
+usethis::use_package("stats", type = "Imports")
 
 # Suggests
 usethis::use_package("testthat", type = "Suggests", min_version = "3.0.1")

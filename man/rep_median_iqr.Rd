@@ -2,7 +2,7 @@
 % Please edit documentation in R/rep_median_iqr.R
 \name{rep_median_iqr}
 \alias{rep_median_iqr}
-\title{rep_median_iqr}
+\title{rep_median_ci}
 \usage{
 rep_median_iqr(
   x,
@@ -13,8 +13,36 @@ rep_median_iqr(
   iqr_prefix = TRUE
 )
 }
+\arguments{
+\item{x}{A numeric vector.}
+
+\item{digits}{An integer indicating the number of decimal places.}
+
+\item{na.rm}{A logical indicating if missings should be removed from \code{x}
+before computing the distributional parameters (default: \code{TRUE}).}
+
+\item{collapse}{A character which is placed between the lower and the upper
+confidence bound in the formatted output.}
+
+\item{iqr_brackets}{A character. Either \code{"round"} (default) or \code{"square"} to
+indicate the type of brackets to surround the confidence interval in the
+formatted output.}
+
+\item{iqr_prefix}{A logical. If \code{TRUE} (default), the confidence interval is
+prefixed with \code{"IQR: "}.}
+}
+\value{
+A character with the formatted output.
+}
 \description{
+Reporting helper function: computes and formats median and
+interquartile range from a numeric vector.
+}
+\details{
 rep_median_iqr
+
+This is just a special case of \code{\link[=rep_median_ci]{rep_median_ci()}} with the parameter
+\code{conf_int} set to \code{50}.
 }
 \examples{
 set.seed(123)
@@ -26,4 +54,7 @@ rep_median_iqr(x, iqr_brackets = "square")
 rep_median_iqr(x, iqr_brackets = "square", iqr_prefix = FALSE)
 rep_median_iqr(x, collapse = ";", iqr_prefix = FALSE)
 
+}
+\seealso{
+\code{\link[=rep_median_ci]{rep_median_ci()}}
 }

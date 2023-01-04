@@ -13,12 +13,35 @@ rep_sum_pct(
   suffix = TRUE
 )
 }
+\arguments{
+\item{count}{A numeric. The numerator.}
+
+\item{count_reference}{A numeric. The denominator.}
+
+\item{digits}{An integer indicating the number of decimal places.}
+
+\item{na.rm}{A logical indicating if missings should be removed from \code{x}
+before computing the distributional parameters (default: \code{TRUE}).}
+
+\item{brackets}{A character. Either \code{"round"} (default) or \code{"square"} to
+indicate the type of brackets to surround the relative count.}
+
+\item{suffix}{A character which is placed between the lower and the upper
+confidence bound in the formatted output.}
+}
+\value{
+A character with the formatted output.
+}
 \description{
-rep_sum_pct
+Reporting helper function: computes and formats the relative
+percentage of a count.
 }
 \examples{
 rep_sum_pct(count = 40, count_reference = 200)
 rep_sum_pct(count = 40, count_reference = 200, brackets = "square")
-rep_sum_pct(count = 40, count_reference = 200, brackets = "square", suffix = FALSE)
+rep_sum_pct(40, 200, brackets = "square", suffix = FALSE)
 
+}
+\seealso{
+\link[stats:median]{stats::median}, \link[stats:quantile]{stats::quantile}, \code{\link[Hmisc:wtd.stats]{Hmisc::wtd.quantile()}}
 }

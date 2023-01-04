@@ -16,8 +16,39 @@ rep_median_ci(
   weights = NA
 )
 }
+\arguments{
+\item{x}{A numeric vector.}
+
+\item{conf_int}{A numeric between 0 and 100 to indicate the confidence
+interval that should be computed.}
+
+\item{digits}{An integer indicating the number of decimal places.}
+
+\item{na.rm}{A logical indicating if missings should be removed from \code{x}
+before computing the distributional parameters (default: \code{TRUE}).}
+
+\item{collapse}{A character which is placed between the lower and the upper
+confidence bound in the formatted output.}
+
+\item{iqr_brackets}{A character. Either \code{"round"} (default) or \code{"square"} to
+indicate the type of brackets to surround the confidence interval in the
+formatted output.}
+
+\item{iqr_prefix}{A logical. If \code{TRUE} (default), the confidence interval is
+prefixed with \code{"IQR: "}.}
+
+\item{weighted}{A logical. If \code{TRUE}, a weighted median and confidence
+interval are calculated (default: \code{FALSE}).}
+
+\item{weights}{A vector with the weights (if \code{weighted = TRUE};
+default: \code{NA})}
+}
+\value{
+A character with the formatted output.
+}
 \description{
-rep_median_ci
+Reporting helper function: computes and formats median and
+confidence interval from a numeric vector.
 }
 \examples{
 set.seed(123)
@@ -27,4 +58,7 @@ rep_median_ci(rep(1, 10), conf_int = 95)
 rep_median_ci(x, conf_int = 95, collapse = "-")
 rep_median_ci(x, iqr_brackets = "square", conf_int = 50)
 
+}
+\seealso{
+\link[stats:median]{stats::median}, \link[stats:quantile]{stats::quantile}, \code{\link[Hmisc:wtd.stats]{Hmisc::wtd.quantile()}}
 }
