@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-01-03)
+## Unreleased (2023-01-04)
 
 #### Breaking changes
 
@@ -71,6 +71,8 @@
 
 #### Docs
 
+-   updated documentation
+    ([bb2b489](https://github.com/kapsner/kdry/tree/bb2b48985dab5a1ed8c4232f4debf26d51e723f3))
 -   updated example
     ([3fb3fb6](https://github.com/kapsner/kdry/tree/3fb3fb6d7715579f7a59fdc69d43555110da7198))
 -   updated examples
@@ -104,4 +106,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...bfea7aa`](https://github.com/kapsner/kdry/compare/41f1eba...bfea7aa)
+[`41f1eba...bb2b489`](https://github.com/kapsner/kdry/compare/41f1eba...bb2b489)

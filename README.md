@@ -12,6 +12,7 @@ This R package provides a collection of helper functions and code snippets to av
 
 | prefix | description |
 | ------ | ----------- |
+| -      | No prefix for very basic helper functions |
 | dtr_   | Data transform helper functions |
 | mlh_   | Machine learning helper functions |
 | pch_   | Parallel computing helper functions |

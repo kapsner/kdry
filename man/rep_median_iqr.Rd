@@ -2,7 +2,7 @@
 % Please edit documentation in R/rep_median_iqr.R
 \name{rep_median_iqr}
 \alias{rep_median_iqr}
-\title{rep_median_ci}
+\title{rep_median_iqr}
 \usage{
 rep_median_iqr(
   x,
@@ -39,8 +39,6 @@ Reporting helper function: computes and formats median and
 interquartile range from a numeric vector.
 }
 \details{
-rep_median_iqr
-
 This is just a special case of \code{\link[=rep_median_ci]{rep_median_ci()}} with the parameter
 \code{conf_int} set to \code{50}.
 }
