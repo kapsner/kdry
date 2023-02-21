@@ -19,7 +19,7 @@ my_desc$set_authors(c(
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
-my_desc$set_version("0.0.0.9004")
+my_desc$set_version("0.0.0.9005")
 # The title of your package
 my_desc$set(Title = "Kapsner's \"Don't Repeat Yourself\"-Collection")
 # The description of your package

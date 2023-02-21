@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-01-04)
+## Unreleased (2023-01-31)
 
 #### Breaking changes
 
@@ -9,6 +9,8 @@
 
 #### New features
 
+-   added icolnames function
+    ([a2de961](https://github.com/kapsner/kdry/tree/a2de9617d3c374e916d88d878d1475b9480d3754))
 -   added more reporting tools
     ([bfea7aa](https://github.com/kapsner/kdry/tree/bfea7aabbbac446f5baf2c74d5a599fd71e96964))
 -   started adding reporting utilities
@@ -106,4 +108,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...bb2b489`](https://github.com/kapsner/kdry/compare/41f1eba...bb2b489)
+[`41f1eba...a2de961`](https://github.com/kapsner/kdry/compare/41f1eba...a2de961)
