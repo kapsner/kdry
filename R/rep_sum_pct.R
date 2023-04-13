@@ -29,8 +29,11 @@ rep_sum_pct <- function(count,
                         brackets = c("round", "square"),
                         suffix = TRUE
 ) {
-  stopifnot(sapply(c(count, count_reference),
-                   function(x) is.numeric(x) && length(x) == 1))
+  stopifnot(
+    "`count` and `count_reference` must be numeric of length() == 1" =
+      sapply(c(count, count_reference),
+             function(x) is.numeric(x) && length(x) == 1)
+  )
   if (isTRUE(suffix)) {
     add_suffix <- "%"
   } else {

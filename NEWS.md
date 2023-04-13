@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-01-31)
+## Unreleased (2023-02-21)
 
 #### Breaking changes
 
@@ -9,6 +9,8 @@
 
 #### New features
 
+-   added pval-helper
+    ([6e20f3b](https://github.com/kapsner/kdry/tree/6e20f3ba1e52fd8ff17962ee3a99c8e222121086))
 -   added icolnames function
     ([a2de961](https://github.com/kapsner/kdry/tree/a2de9617d3c374e916d88d878d1475b9480d3754))
 -   added more reporting tools
@@ -108,4 +110,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...a2de961`](https://github.com/kapsner/kdry/compare/41f1eba...a2de961)
+[`41f1eba...6e20f3b`](https://github.com/kapsner/kdry/compare/41f1eba...6e20f3b)

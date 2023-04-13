@@ -15,7 +15,7 @@ icolnames <- function(df) {
   stopifnot(is.data.frame(df))
   cn <- colnames(df)
   out_df <- data.table::data.table(
-    index = 1:length(cn),
+    index = seq_along(cn),
     names = cn
   )
   return(out_df)

@@ -68,7 +68,9 @@ test_that(
     f1 <- file.path(d1, "file.one")
     dir.create(d2, recursive = TRUE)
     file.create(f1)
-    misc_recursive_copy(d1, d3, force = TRUE)
+    expect_silent(
+      misc_recursive_copy(d1, d3, force = TRUE)
+    )
 
     # clean up#
     unlink(d1, recursive = TRUE)

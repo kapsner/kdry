@@ -7,7 +7,7 @@ rep_distribution_meta <- function(central_tendency,
                                   brackets = c("round", "square")
 ) {
   stopifnot(
-    is.character(prefix)
+    "`prefix` must be a character" = is.character(prefix)
   )
   brackets <- match.arg(brackets)
   solved_brackets <- switch(brackets, round = c("(", ")"), square = c("[", "]"))
@@ -21,7 +21,7 @@ rep_distribution_meta <- function(central_tendency,
 
 # remove digits after decimal point if all zero
 remove_all_zero_digits_after_dec <- function(x) { # nolint
-  stopifnot(is.character(x))
+  stopifnot("`x` must be a character" = is.character(x))
   # recognize empty digits on right of decimal point
   empty_digit_pattern <- paste0("\\", options("OutDec"), "0+$")
   if (grepl(pattern = empty_digit_pattern, x = x)) {

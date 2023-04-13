@@ -15,7 +15,8 @@
 #' @param weighted A logical. If `TRUE`, a weighted mean and standard deviation
 #'   are calculated (default: `FALSE`).
 #' @param weights A vector with the weights (if `weighted = TRUE`;
-#'   default: `NA`)
+#'   default: `NA`) passed futher on to [stats::weighted.mean()] and
+#'   [Hmisc::wtd.var()].
 #'
 #' @return A character with the formatted output.
 #'
@@ -40,9 +41,9 @@ rep_mean_sd <- function(x,
                         weights = NA
 ) {
   stopifnot(
-    is.numeric(x),
-    is.logical(weighted),
-    ifelse(weighted, is.vector(weights), TRUE)
+    "`x` must be a numeric vector" = is.numeric(x),
+    "`weighted` must be a boolean" = is.logical(weighted),
+    "`weights` must be a vector" = ifelse(weighted, is.vector(weights), TRUE)
   )
   if (isTRUE(sd_prefix)) {
     sd_prefix <- "\u00B1"

@@ -15,7 +15,11 @@
 #' @export
 #
 sts_normalize <- function(x, na.rm = FALSE) { # nolint
-  stopifnot(is.numeric(x), length(x) > 1L, is.vector(x), is.logical(na.rm))
+  stopifnot(
+    "`x` must be numeric" = is.numeric(x),
+    "Length of `x` must be > 1" = length(x) > 1L,
+    "`x` must be a vector" = is.vector(x),
+    "`na.rm` must be a boolean" = is.logical(na.rm))
   if (na.rm) {
     x <- x[!is.na(x)]
   }

@@ -1,4 +1,4 @@
-# kdry - Kapsner's "Don't repeat yourself"-collection
+# kdry - K's "Don't repeat yourself"-collection
 
 <!-- badges: start -->
 [![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)

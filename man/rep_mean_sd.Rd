@@ -33,7 +33,8 @@ prefixed with a plus-minus-sign ("±").}
 are calculated (default: \code{FALSE}).}
 
 \item{weights}{A vector with the weights (if \code{weighted = TRUE};
-default: \code{NA})}
+default: \code{NA}) passed futher on to \code{\link[stats:weighted.mean]{stats::weighted.mean()}} and
+\code{\link[Hmisc:wtd.stats]{Hmisc::wtd.var()}}.}
 }
 \value{
 A character with the formatted output.

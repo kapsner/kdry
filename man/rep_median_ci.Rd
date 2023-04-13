@@ -40,8 +40,8 @@ prefixed with \code{"IQR: "}.}
 \item{weighted}{A logical. If \code{TRUE}, a weighted median and confidence
 interval are calculated (default: \code{FALSE}).}
 
-\item{weights}{A vector with the weights (if \code{weighted = TRUE};
-default: \code{NA})}
+\item{weights}{A numeric vector of weights passed further on to
+\code{\link[Hmisc:wtd.stats]{Hmisc::wtd.quantile()}} if \code{weighted = TRUE} (default: \code{NA}).}
 }
 \value{
 A character with the formatted output.

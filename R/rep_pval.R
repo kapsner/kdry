@@ -24,11 +24,12 @@ rep_pval <- function(
     digits = 3L
 ) {
   stopifnot(
-    is.numeric(p),
-    p <= 1.0 && p >= 0,
-    is.numeric(threshold),
-    threshold <= 1.0 && threshold >= 0,
-    is.integer(digits)
+    "`p` must be numeric" = is.numeric(p),
+    "`p` must be in range between 0 and 1" = p <= 1.0 && p >= 0,
+    "`threshold` must be numeric" = is.numeric(threshold),
+    "`threshold` must be in range between 0 and 1" =
+      threshold <= 1.0 && threshold >= 0,
+    "`digits` must be an integer" = is.integer(digits)
   )
 
   if (p < threshold) {

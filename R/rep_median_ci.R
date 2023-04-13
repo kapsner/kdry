@@ -14,6 +14,8 @@
 #'   prefixed with `"IQR: "`.
 #' @param weighted A logical. If `TRUE`, a weighted median and confidence
 #'   interval are calculated (default: `FALSE`).
+#' @param weights A numeric vector of weights passed further on to
+#'   [Hmisc::wtd.quantile()] if `weighted = TRUE` (default: `NA`).
 #'
 #' @inheritParams rep_mean_sd
 #'
@@ -41,11 +43,14 @@ rep_median_ci <- function(x,
                           weights = NA
 ) {
   stopifnot(
-    length(conf_int) == 1,
-    is.numeric(x),
-    is.character(collapse),
-    conf_int > 0 && conf_int < 100,
-    is.logical(weighted), ifelse(weighted, is.vector(weights), TRUE)
+    "`conf_int` must be of length() == 1" = length(conf_int) == 1,
+    "`x` must be numeric" = is.numeric(x),
+    "`collapse` must be a character" = is.character(collapse),
+    "`conf_int` must be in range between 0 and 100" =
+      conf_int > 0 && conf_int < 100,
+    "`weighted` must be a boolean" = is.logical(weighted),
+    "`weights` must be a numeric vector" =
+      ifelse(weighted, is.vector(weights), TRUE)
   )
   if (isTRUE(iqr_prefix)) {
     qa_prefix <- "IQR: "

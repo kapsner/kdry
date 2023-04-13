@@ -19,9 +19,9 @@ my_desc$set_authors(c(
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
-my_desc$set_version("0.0.0.9005")
+my_desc$set_version("0.0.0.9006")
 # The title of your package
-my_desc$set(Title = "Kapsner's \"Don't Repeat Yourself\"-Collection")
+my_desc$set(Title = "K's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
 my_desc$set(Description = paste0(
   "A collection of helper functions and code snippets to avoid redundancy in ",

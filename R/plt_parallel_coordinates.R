@@ -75,21 +75,26 @@ plt_parallel_coordinates <- function(
     h = 0.04
   )
   stopifnot(
-    is.list(line_jitter),
-    intersect(names(line_jitter),
+    "`line_jitter` must be a list" = is.list(line_jitter),
+    "Allowed names of `line_jitter` are 'w' and 'h'" =
+      intersect(names(line_jitter),
               names(line_jitter_list)) == names(line_jitter),
-    is.list(color_args),
-    intersect(names(color_args), names(color_arg_list)) == names(color_args),
-    ifelse(
+    "`color_args` must be a list" = is.list(color_args),
+    "Allowed names of `color_args` are 'alpha', 'begin', \
+    'end', 'option', and 'direction'" =
+      intersect(names(color_args), names(color_arg_list)) == names(color_args),
+    "Names of `cols` must exist in `colnames(data)`" = ifelse(
       is.null(cols), TRUE, intersect(cols, colnames(data)) == cols
     ),
-    ifelse(
+    "`color_variable` must exist in `colnames(data)` \
+    and only one variable may be provided" = ifelse(
       is.null(color_variable), TRUE,
       intersect(color_variable, colnames(data)) == color_variable &&
         length(color_variable) == 1L
     ),
-    data.table::is.data.table(data),
-    is.numeric(text_label_size) && length(text_label_size) == 1L
+    "`data` must be a `data.table` object" = data.table::is.data.table(data),
+    "`text_label_size` must be a numeric of length() == 1" =
+      is.numeric(text_label_size) && length(text_label_size) == 1L
   )
 
   # updated default_list
