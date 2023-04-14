@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-04-13)
+## Unreleased (2023-04-14)
 
 #### Breaking changes
 
@@ -94,6 +94,8 @@
 
 #### Other changes
 
+-   more informative error messages to stopifnot
+    ([ca338fb](https://github.com/kapsner/kdry/tree/ca338fba30c7cf2a504979649d67c9b6a9c542df))
 -   working on improving error messages in stopifnot statements
     ([09657e7](https://github.com/kapsner/kdry/tree/09657e794c2fa5fda253ad6da91b9abacf25ef8e))
 -   added recursive copying function
@@ -112,4 +114,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...09657e7`](https://github.com/kapsner/kdry/compare/41f1eba...09657e7)
+[`41f1eba...ca338fb`](https://github.com/kapsner/kdry/compare/41f1eba...ca338fb)
