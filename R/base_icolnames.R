@@ -12,7 +12,7 @@
 #' @export
 #'
 icolnames <- function(df) {
-  stopifnot(is.data.frame(df))
+  stopifnot("`df` should be a data.frame" = is.data.frame(df))
   cn <- colnames(df)
   out_df <- data.table::data.table(
     index = seq_along(cn),

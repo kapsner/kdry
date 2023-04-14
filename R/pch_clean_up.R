@@ -18,7 +18,9 @@
 #' @export
 #
 pch_clean_up <- function(cl) {
-  stopifnot(inherits(cl, c("SOCKcluster", "cluster")))
+  stopifnot(
+    "`cluster` must be a SOCKcluster object" =
+      inherits(cl, c("SOCKcluster", "cluster")))
   parallel::stopCluster(cl)
   foreach::registerDoSEQ()
   invisible()

@@ -23,8 +23,11 @@
 #'
 list.update <- function(main_list, new_list, ...) { # nolint
   stopifnot(
-    is.list(new_list), is.list(main_list),
-    identical(intersect(names(new_list), names(main_list)), names(new_list))
+    "`new_list` needs to be a list()-object"  = is.list(new_list),
+    "`main_list` needs to be a list()-object" = is.list(main_list),
+    "All names of `new_list` must exist in `main_list`" = identical(
+      intersect(names(new_list), names(main_list)), names(new_list)
+    )
   )
   return(list.append(main_list = main_list, append_list = new_list, ...))
 }

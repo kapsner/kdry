@@ -21,8 +21,8 @@
 #'
 mlh_reshape <- function(object) {
   stopifnot(
-    dim(object)[2] > 1L,
-    all(abs(1L - rowSums(object)) < 1e-06)
+    "`object` needs to have at least 2 columns" = dim(object)[2] > 1L,
+    "Rows do not sum up to 1" = all(abs(1L - rowSums(object)) < 1e-06)
   )
   cn <- colnames(object)
   if (is.null(cn)) {

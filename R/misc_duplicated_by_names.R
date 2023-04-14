@@ -17,8 +17,9 @@
 #'
 misc_duplicated_by_names <- function(object, ...) {
   stopifnot(
-    !is.null(names(object)),
-    length(names(object)) > 0L
+    "`object` must have names, i.e. `names(object)` must return a \
+    character vector" = !is.null(names(object)),
+    "`object` must have at least 1 name" = length(names(object)) > 0L
   )
   return(duplicated(x = names(object), ...))
 }

@@ -16,7 +16,7 @@
 #' @export
 #
 pch_check_available_cores <- function(ncores = -1L) {
-  stopifnot(is.integer(as.integer(ncores)))
+  stopifnot("`ncores` must be an integer" = is.integer(as.integer(ncores)))
   ncores <- as.integer(ncores)
   available_cores <- parallel::detectCores()
 

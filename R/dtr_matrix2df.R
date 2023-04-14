@@ -21,9 +21,14 @@
 #'
 dtr_matrix2df <- function(matrix, cat_vars = NULL) {
   stopifnot(
-    inherits(x = matrix, what = c("matrix", "array")),
-    ifelse(!is.null(cat_vars), is.character(cat_vars), TRUE),
-    intersect(cat_vars, colnames(matrix)) == cat_vars
+    "`x` must be a matrix object" = inherits(
+      x = matrix, what = c("matrix", "array")
+    ),
+    "`cat_vars` must be a character" = ifelse(
+      !is.null(cat_vars), is.character(cat_vars), TRUE
+    ),
+    "The names of `cat_vars` must exist in colnames(matrix)" = intersect(
+      cat_vars, colnames(matrix)) == cat_vars
   )
   matrix_dt <- data.table::as.data.table(matrix)
   if (!is.null(cat_vars)) {

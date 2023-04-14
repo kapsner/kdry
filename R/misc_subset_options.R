@@ -16,7 +16,10 @@
 #' @export
 #'
 misc_subset_options <- function(keyword) {
-  stopifnot(is.character(keyword), length(keyword) == 1L)
+  stopifnot(
+    "`keyword` must be a character" = is.character(keyword),
+    "`keyword` must be of length() == 1" = length(keyword) == 1L
+  )
   relevant_option_pos <- grep(
     pattern = keyword,
     x = names(options()),

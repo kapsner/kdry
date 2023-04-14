@@ -17,12 +17,14 @@
 #' @export
 #'
 mlh_subset <- function(object, ids) {
-  stopifnot(is.integer(ids))
+  stopifnot("`ids` must be an integer" = is.integer(ids))
   if (is.null(dim(object)) && is.atomic(object)) {
     return(object[ids])
   } else {
     stopifnot(
-      inherits(object, "matrix") || inherits(object, "data.frame") ||
+      "`object` must be either a matrix, a data.frame or a \
+      survial::Surv object" =
+        inherits(object, "matrix") || inherits(object, "data.frame") ||
         inherits(object, "Surv")
     )
     if (inherits(object, "matrix") || inherits(object, "data.frame")) {

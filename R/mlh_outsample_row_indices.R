@@ -36,12 +36,20 @@ mlh_outsample_row_indices <- function(
     type = NULL
   ) {
   stopifnot(
-    is.list(fold_list), length(fold_list) > 0L,
-    is.integer(dataset_nrows <- as.integer(dataset_nrows)),
-    length(dataset_nrows) == 1L,
-    ifelse(is.null(type), TRUE, type %in% c("glmnet")),
-    length(names(fold_list)) > 0L
+    "`fold_list` needs to be a `list()-object`"  = is.list(fold_list),
+    "`fold_list` must contain at least one item"  = length(fold_list) > 0L,
+    "`dataset_nrows` must be an integer" = is.integer(
+      as.integer(dataset_nrows)
+    ),
+    "Please provide exactly one number for `dataset_nrows`" =
+      length(dataset_nrows) == 1L,
+    "`type` must be `'glmne '`" =
+      ifelse(is.null(type), TRUE, type %in% c("glmnet")),
+    "`fold_list` must contain at least one named item" =
+      length(names(fold_list)) > 0L
   )
+  dataset_nrows <- as.integer(dataset_nrows)
+
   fold_ids <- sapply(
     X = names(fold_list),
     FUN = function(x) {
@@ -53,7 +61,9 @@ mlh_outsample_row_indices <- function(
   )
 
   if (is.null(type)) {
-    stopifnot(length(fold_ids) == length(fold_list))
+    stopifnot(
+      "Length of `fold_ids` is not equal to length of `fold_list`" =
+        length(fold_ids) == length(fold_list))
     return(fold_ids)
   } else if (type == "glmnet") {
     # assign each row of the dataset to a specific test fold
@@ -72,9 +82,11 @@ mlh_outsample_row_indices <- function(
     }
     fids <- fids[order(get("row_id"))]
     stopifnot(
-      !any(duplicated(fids$row_id)),
-      length(unique(fids$fold_id)) == length(fold_list),
-      nrow(fids) == dataset_nrows
+      "Duplicates occurred in `row_id`" = !any(duplicated(fids$row_id)),
+      "Lenght of unique `fold_id`s is not equal to number of provided folds" =
+        length(unique(fids$fold_id)) == length(fold_list),
+      "Number of fold ids needs to match number of observations in the dataset"
+      = nrow(fids) == dataset_nrows
     )
     return(fids)
   } else {

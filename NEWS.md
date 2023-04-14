@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-02-21)
+## Unreleased (2023-04-13)
 
 #### Breaking changes
 
@@ -94,6 +94,8 @@
 
 #### Other changes
 
+-   working on improving error messages in stopifnot statements
+    ([09657e7](https://github.com/kapsner/kdry/tree/09657e794c2fa5fda253ad6da91b9abacf25ef8e))
 -   added recursive copying function
     ([b056879](https://github.com/kapsner/kdry/tree/b0568790248f82c087046adb3bfe885a3aed69f0))
 -   doparallel and foreach to imports
@@ -110,4 +112,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...6e20f3b`](https://github.com/kapsner/kdry/compare/41f1eba...6e20f3b)
+[`41f1eba...09657e7`](https://github.com/kapsner/kdry/compare/41f1eba...09657e7)

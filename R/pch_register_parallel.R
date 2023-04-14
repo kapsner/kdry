@@ -18,7 +18,7 @@
 #' @export
 #
 pch_register_parallel <- function(ncores) {
-  stopifnot(is.integer(as.integer(ncores)))
+  stopifnot("`ncores` must be an integer" = is.integer(as.integer(ncores)))
   ncores <- as.integer(ncores)
   cl <- parallel::makePSOCKcluster(ncores)
   doParallel::registerDoParallel(cl)

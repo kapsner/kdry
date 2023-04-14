@@ -24,7 +24,7 @@
 #' @export
 #'
 misc_recursive_copy <- function(source_dir, target_dir, force = FALSE) {
-  stopifnot(is.logical(force))
+  stopifnot("`force` must be a boolean value" = is.logical(force))
   source_dir <- normalizePath(path = source_dir, mustWork = FALSE)
   target_dir <- normalizePath(path = target_dir, mustWork = FALSE)
   if (isFALSE(force)) {

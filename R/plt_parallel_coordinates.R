@@ -268,7 +268,7 @@ plt_coordinate_utils <- function() {
 
 
 cat2integer <- function(data) {
-  stopifnot(data.table::is.data.table(data))
+  stopifnot("`data` must be a data.table" = data.table::is.data.table(data))
   data_copy <- data.table::copy(data)
   # character / factor to integer
   cat_vars <- colnames(data_copy)[

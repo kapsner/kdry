@@ -21,7 +21,10 @@
 #' @export
 #'
 list.append <- function(main_list, append_list, ...) { # nolint
-  stopifnot(is.list(main_list), is.list(append_list) || is.null(append_list))
+  stopifnot(
+    "`main_list` needs to be a list()-object" = is.list(main_list),
+    "`append_list` needs to be either a list()-object or empty" =
+      is.list(append_list) || is.null(append_list))
   if (length(append_list) > 0L) {
     main_list <- utils::modifyList(x = main_list, val = append_list, ...)
   }
