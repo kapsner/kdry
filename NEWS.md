@@ -94,6 +94,8 @@
 
 #### Other changes
 
+-   included cran comments; updated news.md
+    ([51ae5f0](https://github.com/kapsner/kdry/tree/51ae5f08f6030fc397f730feed6a023645750735))
 -   more informative error messages to stopifnot
     ([ca338fb](https://github.com/kapsner/kdry/tree/ca338fba30c7cf2a504979649d67c9b6a9c542df))
 -   working on improving error messages in stopifnot statements
@@ -114,4 +116,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...ca338fb`](https://github.com/kapsner/kdry/compare/41f1eba...ca338fb)
+[`41f1eba...51ae5f0`](https://github.com/kapsner/kdry/compare/41f1eba...51ae5f0)
