@@ -1,6 +1,13 @@
 # kdry NEWS
 
-## Unreleased (2023-04-14)
+## Unreleased (2023-04-18)
+
+#### Other changes
+
+-   update readme
+    ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
+
+## v0.0.1 (2023-04-16)
 
 #### Breaking changes
 
@@ -94,6 +101,8 @@
 
 #### Other changes
 
+-   fixed cran submission
+    ([34b5f73](https://github.com/kapsner/kdry/tree/34b5f734fa7557190fa380c09179e014de0f25dd))
 -   included cran comments; updated news.md
     ([51ae5f0](https://github.com/kapsner/kdry/tree/51ae5f08f6030fc397f730feed6a023645750735))
 -   more informative error messages to stopifnot
@@ -116,4 +125,4 @@
     ([d04c5c9](https://github.com/kapsner/kdry/tree/d04c5c968bf2dfeff15adeafe0930850f3257f99))
 
 Full set of changes:
-[`41f1eba...51ae5f0`](https://github.com/kapsner/kdry/compare/41f1eba...51ae5f0)
+[`41f1eba...v0.0.1`](https://github.com/kapsner/kdry/compare/41f1eba...v0.0.1)

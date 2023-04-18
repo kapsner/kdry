@@ -29,7 +29,7 @@ Suggests:
     testthat (>= 3.0.1)
 Config/testthat/edition: 3
 Config/testthat/parallel: false
-Date/Publication: 2023-04-16 07:59:38 UTC
+Date/Publication: 2023-04-18 17:16:59 UTC
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
