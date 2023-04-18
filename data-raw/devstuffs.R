@@ -24,7 +24,7 @@ my_desc$set_version("0.0.1")
 my_desc$set(Title = "K's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
 my_desc$set(Description = paste0(
-  "A personal collection of helper functions and code snippets to avoid ",
+  "A collection of personal helper functions and code snippets to avoid ",
   "redundancy in the spirit of the \"Don't repeat yourself\" principle of ",
   "software development ",
   "(<https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>)."

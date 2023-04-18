@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: 
     person("Lorenz A.", "Kapsner", , "lorenz.kapsner@gmail.com", role = c("cre", "aut", "cph"),
            comment = c(ORCID = "0000-0003-1866-860X"))
-Description: A personal collection of helper functions and code snippets
+Description: A collection of personal helper functions and code snippets
     to avoid redundancy in the spirit of the "Don't repeat yourself"
     principle of software development
     (<https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>).
@@ -29,7 +29,6 @@ Suggests:
     testthat (>= 3.0.1)
 Config/testthat/edition: 3
 Config/testthat/parallel: false
-Date/Publication: 2023-04-18 17:16:59 UTC
+Date/Publication: 2023-04-18 17:18:33 UTC
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
