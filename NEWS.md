@@ -4,13 +4,15 @@
 
 #### Other changes
 
+-   updated pkg description
+    ([f3ead00](https://github.com/kapsner/kdry/tree/f3ead00c55ed2ea2207bbadcb218f82c1adbcf2b))
 -   update metadata and news.md
     ([6345c67](https://github.com/kapsner/kdry/tree/6345c67aed035169618f2a0b5a34ed33eead44ea))
 -   update readme
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...6345c67`](https://github.com/kapsner/kdry/compare/v0.0.1...6345c67)
+[`v0.0.1...f3ead00`](https://github.com/kapsner/kdry/compare/v0.0.1...f3ead00)
 
 ## v0.0.1 (2023-04-16)
 
