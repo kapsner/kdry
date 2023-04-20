@@ -9,7 +9,7 @@ list.update(main_list, new_list, ...)
 \arguments{
 \item{main_list}{A list, which items should be updated.}
 
-\item{new_list}{A list with new values of items ffrom \code{main_list} that should
+\item{new_list}{A list with new values of items from \code{main_list} that should
 be updated. All names of \code{new_list} must be present in \code{main_list}.}
 
 \item{...}{Further arguments passed to \code{utils::modifyList()}.}

@@ -3,7 +3,7 @@
 #' @description Helper function to update items in an R list.
 #'
 #' @param main_list A list, which items should be updated.
-#' @param new_list A list with new values of items ffrom `main_list` that should
+#' @param new_list A list with new values of items from `main_list` that should
 #'   be updated. All names of `new_list` must be present in `main_list`.
 #' @inheritParams list.append
 #'
@@ -25,8 +25,12 @@ list.update <- function(main_list, new_list, ...) { # nolint
   stopifnot(
     "`new_list` needs to be a list()-object"  = is.list(new_list),
     "`main_list` needs to be a list()-object" = is.list(main_list),
-    "All names of `new_list` must exist in `main_list`" = identical(
+    "All names of `new_list` must exist in `main_list`" = ifelse(
+      test = length(new_list) > 0L,
+      yes = identical(
       intersect(names(new_list), names(main_list)), names(new_list)
+      ),
+      no = TRUE
     )
   )
   return(list.append(main_list = main_list, append_list = new_list, ...))
