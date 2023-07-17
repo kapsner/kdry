@@ -1,6 +1,11 @@
 # kdry NEWS
 
-## Unreleased (2023-04-19)
+## Unreleased (2023-04-20)
+
+#### Bug fixes
+
+-   this commit aims at fixing errors with list.update on r-oldrel
+    ([614b021](https://github.com/kapsner/kdry/tree/614b02168da07260da699a7de1cd524ea85d6cf2))
 
 #### Other changes
 
@@ -14,7 +19,7 @@
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...8c9935d`](https://github.com/kapsner/kdry/compare/v0.0.1...8c9935d)
+[`v0.0.1...614b021`](https://github.com/kapsner/kdry/compare/v0.0.1...614b021)
 
 ## v0.0.1 (2023-04-16)
 

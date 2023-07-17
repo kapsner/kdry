@@ -71,3 +71,17 @@ test_that(
     )
   }
 )
+
+test_that(
+  desc = "test rep - rep_frac_pct",
+  code = {
+
+    expect_snapshot_output(rep_frac_pct(count = 40, count_reference = 200))
+    expect_snapshot_output(
+      rep_frac_pct(count = 40, count_reference = 200, brackets = "square")
+    )
+    expect_snapshot_output(
+      rep_frac_pct(40, 200, brackets = "square", suffix = FALSE)
+    )
+  }
+)
