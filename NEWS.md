@@ -1,5 +1,12 @@
 # kdry NEWS
 
+## Unreleased (2024-03-08)
+
+#### Other changes
+
+-   updated news.md
+    ([b5b36c0](https://github.com/kapsner/kdry/tree/b5b36c084ca4ad21183ccbe014e0996d059cb9b6))
+
 ## v0.0.2 (2024-03-08)
 
 #### New features
