@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2023-07-17)
+## v0.0.2 (2024-03-08)
 
 #### New features
 
@@ -14,6 +14,8 @@
 
 #### Other changes
 
+-   preparing v0.0.2 release
+    ([d07edf8](https://github.com/kapsner/kdry/tree/d07edf8a82dce935a59e0474b8fed36110ac70e6))
 -   updated dev-version
     ([8a0b936](https://github.com/kapsner/kdry/tree/8a0b9364b8ad65e828646e7b0105a1efaa6f6f5e))
 -   updated pkg description
@@ -24,7 +26,7 @@
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...ff89b91`](https://github.com/kapsner/kdry/compare/v0.0.1...ff89b91)
+[`v0.0.1...v0.0.2`](https://github.com/kapsner/kdry/compare/v0.0.1...v0.0.2)
 
 ## v0.0.1 (2023-04-16)
 
