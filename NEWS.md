@@ -1,17 +1,23 @@
+
 # kdry NEWS
 
 ## Unreleased (2024-03-08)
 
 #### Other changes
 
+-   prep dev-version
+    ([2b4fccd](https://github.com/kapsner/kdry/tree/2b4fccd2ee56bd20bde760dfa7b327016b84c617))
 -   updated news.md
     ([b5b36c0](https://github.com/kapsner/kdry/tree/b5b36c084ca4ad21183ccbe014e0996d059cb9b6))
+
+Full set of changes:
+[`v0.0.2...2b4fccd`](https://github.com/kapsner/kdry/compare/v0.0.2...2b4fccd)
 
 ## v0.0.2 (2024-03-08)
 
 #### New features
 
--   added new reporting fun rep\_frac\_pct2
+-   added new reporting fun rep_frac_pct2
     ([ff89b91](https://github.com/kapsner/kdry/tree/ff89b91557336eee68c8117dc78b7346572df932))
 
 #### Bug fixes
@@ -39,7 +45,7 @@ Full set of changes:
 
 #### Breaking changes
 
--   rename to mlh\_subset
+-   rename to mlh_subset
     ([72f90d4](https://github.com/kapsner/kdry/tree/72f90d4d8ef5a2cc8bcd88fac9a1fa644203781f))
 
 #### New features
@@ -52,12 +58,12 @@ Full set of changes:
     ([bfea7aa](https://github.com/kapsner/kdry/tree/bfea7aabbbac446f5baf2c74d5a599fd71e96964))
 -   started adding reporting utilities
     ([75c0289](https://github.com/kapsner/kdry/tree/75c028947289c5824641522cb70e327a5293c498))
--   added mlh\_reshape
+-   added mlh_reshape
     ([e1e835d](https://github.com/kapsner/kdry/tree/e1e835d5ff19aac34145d1abd5f70801bd5a4ddb))
 -   added function to fix data types for calculating performance
     measures
     ([215615d](https://github.com/kapsner/kdry/tree/215615def900d10b46aff9b722a6bd8dfbe28efa))
--   added format\_xy
+-   added format_xy
     ([18b0e37](https://github.com/kapsner/kdry/tree/18b0e37e3df2eaaee2caf17553781cd5059a4e96))
 -   added list.update
     ([03031a1](https://github.com/kapsner/kdry/tree/03031a16807bbad308f405aebb44d13679148ee6))
@@ -65,24 +71,24 @@ Full set of changes:
     ([9fed377](https://github.com/kapsner/kdry/tree/9fed377d6691eb6dd9298088e278060659078559))
 -   added parsing of color arguments to parallel coordinates plot
     ([d043226](https://github.com/kapsner/kdry/tree/d043226211b8dab6dabc9c603de0dc709ce2e976))
--   added plt\_parallel\_coordinates
+-   added plt_parallel_coordinates
     ([27a0861](https://github.com/kapsner/kdry/tree/27a0861cca8fc77d3e07d1d0136e5ff6cd1b0341))
 -   added list.append
     ([9f80dec](https://github.com/kapsner/kdry/tree/9f80dec219d457bfbf6beb3601d6e4ff11b8178d))
--   added duplicated\_by\_names
+-   added duplicated_by_names
     ([3a1dd10](https://github.com/kapsner/kdry/tree/3a1dd10fa68e26d114fab21bcd24ef8f4ab80980))
 -   added first general functions
     ([cc13558](https://github.com/kapsner/kdry/tree/cc13558ab12cd383c8ffd6cb123a1660bc0a3f7f))
 
 #### Bug fixes
 
--   fixed argument name of recursive\_copy
+-   fixed argument name of recursive_copy
     ([cecbec2](https://github.com/kapsner/kdry/tree/cecbec26ed1d87be0d3bfc60b52893e56e33c6e5))
--   removed scaling of color\_var
+-   removed scaling of color_var
     ([3ce00bc](https://github.com/kapsner/kdry/tree/3ce00bc58ba3847c567554c0835f63ba3958d61c))
--   also allowing surv objects in mlh\_subset
+-   also allowing surv objects in mlh_subset
     ([4791339](https://github.com/kapsner/kdry/tree/479133999030b58508d2cab461d45ac5e723b985))
--   fixed stopifnot in format\_xy
+-   fixed stopifnot in format_xy
     ([e726ab2](https://github.com/kapsner/kdry/tree/e726ab2339990172fb6f0ba52e7d4f5e5fd58a62))
 -   fix namespace errors with ggplot2
     ([bdbe373](https://github.com/kapsner/kdry/tree/bdbe37380e4a9691ec23a11cb77c217921d6ac1d))
@@ -101,7 +107,7 @@ Full set of changes:
     ([eb261ae](https://github.com/kapsner/kdry/tree/eb261ae7ba37a9ff100c54ed087efa6ac9603009))
 -   removed unnecessary pkg ns check
     ([4b06602](https://github.com/kapsner/kdry/tree/4b06602d3168e4061ec7afe31c1065729ede7eb3))
--   removed mlh\_fix\_performance\_types
+-   removed mlh_fix_performance_types
     ([c671a09](https://github.com/kapsner/kdry/tree/c671a09eaf898ebb3169de18d53e444d7b262106))
 -   only converting non-factors if necessary
     ([a00b747](https://github.com/kapsner/kdry/tree/a00b7473d2f34f9a3b82c3e39f6522dc41b8b610))
