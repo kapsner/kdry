@@ -1,6 +1,6 @@
 # kdry NEWS
 
-## Unreleased (2024-05-16)
+## Unreleased (2024-05-23)
 
 #### CI
 
@@ -9,13 +9,15 @@
 
 #### Other changes
 
+-   automatic readme gen
+    ([f7c19b7](https://github.com/kapsner/kdry/tree/f7c19b7b0aca147f044950b53e45e65cdd84de9b))
 -   prep dev-version
     ([2b4fccd](https://github.com/kapsner/kdry/tree/2b4fccd2ee56bd20bde760dfa7b327016b84c617))
 -   updated news.md
     ([b5b36c0](https://github.com/kapsner/kdry/tree/b5b36c084ca4ad21183ccbe014e0996d059cb9b6))
 
 Full set of changes:
-[`v0.0.2...b2211fc`](https://github.com/kapsner/kdry/compare/v0.0.2...b2211fc)
+[`v0.0.2...f7c19b7`](https://github.com/kapsner/kdry/compare/v0.0.2...f7c19b7)
 
 ## v0.0.2 (2024-03-08)
 
