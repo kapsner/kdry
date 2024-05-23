@@ -98,16 +98,7 @@ usethis::use_git_ignore("Meta")
 
 usethis::use_tidy_description()
 
-
-
-
-#badger::badge_cran_download("sjtable2df", "grand-total", "blue")
-#badger::badge_cran_download("sjtable2df", "last-month", "blue")
-#badger::badge_dependencies("sjtable2df")
-badger::badge_github_actions(action = "R CMD Check via {tic}")
-badger::badge_github_actions(action = "lint")
-badger::badge_github_actions(action = "test-coverage")
-
+quarto::quarto_render(input = "README.qmd")
 
 
 # https://github.com/gitpython-developers/GitPython/issues/1016#issuecomment-1104114129
