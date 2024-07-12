@@ -18,6 +18,7 @@ status](https://github.com/kapsner/kdry/workflows/lint/badge.svg)](https://githu
 [![R build
 status](https://github.com/kapsner/kdry/workflows/test-coverage/badge.svg)](https://github.com/kapsner/kdry/actions)
 [![](https://codecov.io/gh/https://github.com/kapsner/kdry/branch/main/graph/badge.svg)](https://codecov.io/gh/https://github.com/kapsner/kdry)
+[![](https://img.shields.io/badge/doi-10.32614/CRAN.package.kdry-yellow.svg)](https://doi.org/10.32614/CRAN.package.kdry)
 
 <!-- badges: end -->
 

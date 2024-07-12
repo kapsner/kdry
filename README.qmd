@@ -25,6 +25,7 @@ cat_var <- paste(
   badger::badge_github_actions(action = "lint"),
   badger::badge_github_actions(action = "test-coverage"),
   badger::badge_codecov(ref = desc::desc_get_urls()),
+  badger::badge_doi("10.32614/CRAN.package.kdry", color = "yellow"),
   sep = "\n"
 )
 cat_var |> cat()
