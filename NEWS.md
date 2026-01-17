@@ -2,28 +2,7 @@
 
 # kdry NEWS
 
-## Unreleased (2024-05-23)
-
-#### CI
-
--   updated gha
-    ([b2211fc](https://github.com/kapsner/kdry/tree/b2211fcf9a14b3da98a04903786c583b97e0fdf8))
-
-#### Other changes
-
--   added readme.qmd
-    ([5abd195](https://github.com/kapsner/kdry/tree/5abd195281a1359e5331b8f37178a2a10dfc5d9f))
--   automatic readme gen
-    ([f7c19b7](https://github.com/kapsner/kdry/tree/f7c19b7b0aca147f044950b53e45e65cdd84de9b))
--   prep dev-version
-    ([2b4fccd](https://github.com/kapsner/kdry/tree/2b4fccd2ee56bd20bde760dfa7b327016b84c617))
--   updated news.md
-    ([b5b36c0](https://github.com/kapsner/kdry/tree/b5b36c084ca4ad21183ccbe014e0996d059cb9b6))
-
-Full set of changes:
-[`v0.0.2...5abd195`](https://github.com/kapsner/kdry/compare/v0.0.2...5abd195)
-
-## v0.0.2 (2024-03-08)
+## Unreleased (2026-01-17)
 
 #### New features
 
@@ -35,8 +14,28 @@ Full set of changes:
 -   this commit aims at fixing errors with list.update on r-oldrel
     ([614b021](https://github.com/kapsner/kdry/tree/614b02168da07260da699a7de1cd524ea85d6cf2))
 
+#### Tests
+
+-   added conditional execution of suggests pkg
+    ([0ac6576](https://github.com/kapsner/kdry/tree/0ac65764e6e06511fa9ae71b65869b4dcfb6e54d))
+
+#### CI
+
+-   updated gha
+    ([b2211fc](https://github.com/kapsner/kdry/tree/b2211fcf9a14b3da98a04903786c583b97e0fdf8))
+
 #### Other changes
 
+-   added doi
+    ([8bacc33](https://github.com/kapsner/kdry/tree/8bacc33dc1a886a97e522ddfa9087ef710940bd2))
+-   added readme.qmd
+    ([5abd195](https://github.com/kapsner/kdry/tree/5abd195281a1359e5331b8f37178a2a10dfc5d9f))
+-   automatic readme gen
+    ([f7c19b7](https://github.com/kapsner/kdry/tree/f7c19b7b0aca147f044950b53e45e65cdd84de9b))
+-   prep dev-version
+    ([2b4fccd](https://github.com/kapsner/kdry/tree/2b4fccd2ee56bd20bde760dfa7b327016b84c617))
+-   updated news.md
+    ([b5b36c0](https://github.com/kapsner/kdry/tree/b5b36c084ca4ad21183ccbe014e0996d059cb9b6))
 -   preparing v0.0.2 release
     ([d07edf8](https://github.com/kapsner/kdry/tree/d07edf8a82dce935a59e0474b8fed36110ac70e6))
 -   updated dev-version
@@ -49,7 +48,7 @@ Full set of changes:
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...v0.0.2`](https://github.com/kapsner/kdry/compare/v0.0.1...v0.0.2)
+[`v0.0.1...0ac6576`](https://github.com/kapsner/kdry/compare/v0.0.1...0ac6576)
 
 ## v0.0.1 (2023-04-16)
 

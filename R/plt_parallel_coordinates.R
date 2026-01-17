@@ -28,7 +28,7 @@
 #' @seealso [ggplot2::scale_color_viridis_c()]
 
 #' @examples
-#' if (require("ggplot2")) {
+#' if (requireNamespace("ggplot2", quietly = TRUE)) {
 #'   data("iris")
 #'   plt_parallel_coordinates(
 #'     data = data.table::as.data.table(iris[, -5]),
@@ -39,13 +39,18 @@
 #' @export
 #
 plt_parallel_coordinates <- function(
-    data,
-    cols = NULL,
-    color_variable = NULL,
-    color_args = list(alpha = 0.6, begin = .1, end = .9,
-                      option = "inferno", direction = 1),
-    line_jitter = list(w = 0.04, h = 0.04),
-    text_label_size = 3.5
+  data,
+  cols = NULL,
+  color_variable = NULL,
+  color_args = list(
+    alpha = 0.6,
+    begin = .1,
+    end = .9,
+    option = "inferno",
+    direction = 1
+  ),
+  line_jitter = list(w = 0.04, h = 0.04),
+  text_label_size = 3.5
 ) {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop(
@@ -76,25 +81,35 @@ plt_parallel_coordinates <- function(
   )
   stopifnot(
     "`line_jitter` must be a list" = is.list(line_jitter),
-    "Allowed names of `line_jitter` are 'w' and 'h'" =
-      intersect(names(line_jitter),
-              names(line_jitter_list)) == names(line_jitter),
+    "Allowed names of `line_jitter` are 'w' and 'h'" = intersect(
+      names(line_jitter),
+      names(line_jitter_list)
+    ) ==
+      names(line_jitter),
     "`color_args` must be a list" = is.list(color_args),
     "Allowed names of `color_args` are 'alpha', 'begin', \
-    'end', 'option', and 'direction'" =
-      intersect(names(color_args), names(color_arg_list)) == names(color_args),
+    'end', 'option', and 'direction'" = intersect(
+      names(color_args),
+      names(color_arg_list)
+    ) ==
+      names(color_args),
     "Names of `cols` must exist in `colnames(data)`" = ifelse(
-      is.null(cols), TRUE, intersect(cols, colnames(data)) == cols
+      is.null(cols),
+      TRUE,
+      intersect(cols, colnames(data)) == cols
     ),
     "`color_variable` must exist in `colnames(data)` \
     and only one variable may be provided" = ifelse(
-      is.null(color_variable), TRUE,
+      is.null(color_variable),
+      TRUE,
       intersect(color_variable, colnames(data)) == color_variable &&
         length(color_variable) == 1L
     ),
     "`data` must be a `data.table` object" = data.table::is.data.table(data),
-    "`text_label_size` must be a numeric of length() == 1" =
-      is.numeric(text_label_size) && length(text_label_size) == 1L
+    "`text_label_size` must be a numeric of length() == 1" = is.numeric(
+      text_label_size
+    ) &&
+      length(text_label_size) == 1L
   )
 
   # updated default_list
@@ -117,14 +132,14 @@ plt_parallel_coordinates <- function(
     data_copy[, vapply(.SD, is.numeric, logical(1L))]
   ]
   num_vars <- setdiff(num_vars, color_variable)
-  data_copy[
-    ,
+  data_copy[,
     (num_vars) := lapply(
       X = .SD,
       FUN = function(x) {
         sts_normalize(x) %>%
           round(digits = 3)
-      }),
+      }
+    ),
     .SDcols = num_vars
   ]
 
@@ -178,8 +193,8 @@ plt_parallel_coordinates <- function(
 }
 
 plt_coordinate_utils <- function() {
-
-  LabelParams <- ggplot2::ggproto( # nolint
+  LabelParams <- ggplot2::ggproto(
+    # nolint
     `_class` = "LabelParams",
     `_inherit` = ggplot2::GeomText
   )
@@ -200,7 +215,6 @@ plt_coordinate_utils <- function() {
     show.legend = NA, # nolint
     inherit.aes = FALSE # nolint
   ) {
-
     # character / factor to integer
     data <- cat2integer(data)
 
@@ -240,8 +254,7 @@ plt_coordinate_utils <- function() {
             ("label_annot") := as.character(get("original_values"))
           ]
         } else {
-          plt_dat[
-            ,
+          plt_dat[,
             ("label_annot") := as.character(get("original_values"))
           ]
         }
@@ -261,7 +274,8 @@ plt_coordinate_utils <- function() {
           inherit.aes = inherit.aes,
           params = list(na.rm = na.rm, ...),
         )
-      })
+      }
+    )
   }
   return(list(LabelParams = LabelParams, geom_label_params = geom_label_params))
 }
@@ -272,18 +286,22 @@ cat2integer <- function(data) {
   data_copy <- data.table::copy(data)
   # character / factor to integer
   cat_vars <- colnames(data_copy)[
-    data_copy[, vapply(.SD, function(x) {
-      is.character(x) || is.factor(x)
-    }, logical(1L))]
+    data_copy[, vapply(
+      .SD,
+      function(x) {
+        is.character(x) || is.factor(x)
+      },
+      logical(1L)
+    )]
   ]
   if (length(cat_vars) > 0L) {
-    data_copy[
-      ,
+    data_copy[,
       (cat_vars) := lapply(
         X = .SD,
         FUN = function(x) {
           as.integer(x) - 1L
-        }),
+        }
+      ),
       .SDcols = cat_vars
     ]
   }

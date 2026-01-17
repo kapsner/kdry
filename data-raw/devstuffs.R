@@ -15,7 +15,8 @@ my_desc$set_authors(c(
     email = "lorenz.kapsner@gmail.com",
     role = c('cre', 'aut', 'cph'),
     comment = c(ORCID = "0000-0003-1866-860X")
-  )))
+  )
+))
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
@@ -23,18 +24,19 @@ my_desc$set_version("0.0.3")
 # The title of your package
 my_desc$set(Title = "K's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
-my_desc$set(Description = paste0(
-  "A collection of personal helper functions to avoid ",
-  "redundancy in the spirit of the \"Don't repeat yourself\" principle of ",
-  "software development ",
-  "(<https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>)."
-))
+my_desc$set(
+  Description = paste0(
+    "A collection of personal helper functions to avoid ",
+    "redundancy in the spirit of the \"Don't repeat yourself\" principle of ",
+    "software development ",
+    "(<https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>)."
+  )
+)
 # The description of your package
 my_desc$set("Date/Publication" = paste(as.character(Sys.time()), "UTC"))
 # The urls
 my_desc$set("URL", "https://github.com/kapsner/kdry")
-my_desc$set("BugReports",
-            "https://github.com/kapsner/kdry/issues")
+my_desc$set("BugReports", "https://github.com/kapsner/kdry/issues")
 
 # Vignette Builder
 #my_desc$set("VignetteBuilder" = "knitr")
@@ -71,7 +73,6 @@ usethis::use_package("stats", type = "Imports")
 # Suggests
 usethis::use_package("testthat", type = "Suggests", min_version = "3.0.1")
 usethis::use_package("lintr", type = "Suggests")
-#usethis::use_package("knitr", type = "Suggests")
 usethis::use_package("ggplot2", type = "Suggests")
 usethis::use_package("survival", type = "Suggests")
 
@@ -91,6 +92,7 @@ usethis::use_build_ignore("README.md")
 usethis::use_build_ignore("README.qmd")
 usethis::use_build_ignore("docs")
 usethis::use_build_ignore("Meta")
+usethis::use_build_ignore(".pre-commit-config.yaml")
 
 usethis::use_git_ignore("!NEWS.md")
 usethis::use_git_ignore("!README.md")
@@ -101,7 +103,6 @@ usethis::use_git_ignore("Meta")
 usethis::use_tidy_description()
 
 quarto::quarto_render(input = "README.qmd")
-
 
 # https://github.com/gitpython-developers/GitPython/issues/1016#issuecomment-1104114129
 # system(

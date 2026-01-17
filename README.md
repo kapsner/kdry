@@ -17,9 +17,8 @@ status](https://github.com/kapsner/kdry/workflows/R%20CMD%20Check%20via%20%7Btic
 status](https://github.com/kapsner/kdry/workflows/lint/badge.svg)](https://github.com/kapsner/kdry/actions)
 [![R build
 status](https://github.com/kapsner/kdry/workflows/test-coverage/badge.svg)](https://github.com/kapsner/kdry/actions)
-[![](https://codecov.io/gh/https://github.com/kapsner/kdry/branch/main/graph/badge.svg)](https://codecov.io/gh/https://github.com/kapsner/kdry)
+[![](https://codecov.io/gh/https://github.com/kapsner/kdry/branch/main/graph/badge.svg)](https://app.codecov.io/gh/https://github.com/kapsner/kdry)
 [![](https://img.shields.io/badge/doi-10.32614/CRAN.package.kdry-yellow.svg)](https://doi.org/10.32614/CRAN.package.kdry)
-
 <!-- badges: end -->
 
 This R package provides a collection of helper functions and code

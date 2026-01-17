@@ -49,3 +49,4 @@
 docs
 Meta
 !README.qmd
+!.pre-commit-config.yaml

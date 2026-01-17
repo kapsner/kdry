@@ -49,7 +49,7 @@ provided to the argument \code{color_args}. Its default values are
 The implementation to display categorical variables is still experimental.
 }
 \examples{
-if (require("ggplot2")) {
+if (requireNamespace("ggplot2", quietly = TRUE)) {
   data("iris")
   plt_parallel_coordinates(
     data = data.table::as.data.table(iris[, -5]),
