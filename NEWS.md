@@ -2,7 +2,7 @@
 
 # kdry NEWS
 
-## Unreleased (2026-01-17)
+## Unreleased (2026-01-18)
 
 #### New features
 
@@ -17,7 +17,7 @@
 #### Tests
 
 -   added conditional execution of suggests pkg
-    ([0ac6576](https://github.com/kapsner/kdry/tree/0ac65764e6e06511fa9ae71b65869b4dcfb6e54d))
+    ([216ecac](https://github.com/kapsner/kdry/tree/216ecac8a7053c83eb7fe1fb7d79d319f30f46c2))
 
 #### CI
 
@@ -26,6 +26,8 @@
 
 #### Other changes
 
+-   updated description
+    ([8529372](https://github.com/kapsner/kdry/tree/8529372e3a52a2915dfcfec3680fe6cc15def9c0))
 -   added doi
     ([8bacc33](https://github.com/kapsner/kdry/tree/8bacc33dc1a886a97e522ddfa9087ef710940bd2))
 -   added readme.qmd
@@ -48,7 +50,7 @@
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...0ac6576`](https://github.com/kapsner/kdry/compare/v0.0.1...0ac6576)
+[`v0.0.1...8529372`](https://github.com/kapsner/kdry/compare/v0.0.1...8529372)
 
 ## v0.0.1 (2023-04-16)
 
