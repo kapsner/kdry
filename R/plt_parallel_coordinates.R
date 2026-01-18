@@ -136,7 +136,7 @@ plt_parallel_coordinates <- function(
     (num_vars) := lapply(
       X = .SD,
       FUN = function(x) {
-        sts_normalize(x) %>%
+        sts_normalize(x) |>
           round(digits = 3)
       }
     ),
@@ -156,7 +156,7 @@ plt_parallel_coordinates <- function(
 
   colpos <- which(colnames(data) %in% cols)
 
-  data_copy %>%
+  data_copy |>
     ggplot2::ggplot(
       ggplot2::aes(
         x = get("variable"),

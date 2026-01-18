@@ -19,30 +19,30 @@
 #'
 #' @export
 rep_pval <- function(
-    p,
-    threshold = 0.001,
-    digits = 3L
+  p,
+  threshold = 0.001,
+  digits = 3L
 ) {
   stopifnot(
     "`p` must be numeric" = is.numeric(p),
     "`p` must be in range between 0 and 1" = p <= 1.0 && p >= 0,
     "`threshold` must be numeric" = is.numeric(threshold),
-    "`threshold` must be in range between 0 and 1" =
-      threshold <= 1.0 && threshold >= 0,
+    "`threshold` must be in range between 0 and 1" = threshold <= 1.0 &&
+      threshold >= 0,
     "`digits` must be an integer" = is.integer(digits)
   )
 
   if (p < threshold) {
-    threshold <- threshold %>%
-      round(digits = digits) %>%
+    threshold <- threshold |>
+      round(digits = digits) |>
       format(
         scientific = FALSE,
         nsmall = digits
       )
     pval <- paste0("<", threshold)
   } else {
-    pval <- p %>%
-      round(digits = digits) %>%
+    pval <- p |>
+      round(digits = digits) |>
       format(
         scientific = FALSE,
         nsmall = digits

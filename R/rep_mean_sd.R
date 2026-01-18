@@ -32,13 +32,14 @@
 #' rep_mean_sd(x, sd_brackets = "square", sd_prefix = FALSE)
 #'
 #' @export
-rep_mean_sd <- function(x,
-                        digits = 2,
-                        na.rm = TRUE, # nolint
-                        sd_brackets = c("round", "square"),
-                        sd_prefix = TRUE,
-                        weighted = FALSE,
-                        weights = NA
+rep_mean_sd <- function(
+  x,
+  digits = 2,
+  na.rm = TRUE, # nolint
+  sd_brackets = c("round", "square"),
+  sd_prefix = TRUE,
+  weighted = FALSE,
+  weights = NA
 ) {
   stopifnot(
     "`x` must be a numeric vector" = is.numeric(x),
@@ -52,19 +53,19 @@ rep_mean_sd <- function(x,
   }
 
   if (isFALSE(weighted)) {
-    sd <- stats::sd(x = x, na.rm = na.rm) %>%
-      round(digits = digits) %>%
+    sd <- stats::sd(x = x, na.rm = na.rm) |>
+      round(digits = digits) |>
       format(nsmall = digits, trim = TRUE)
-    mea <- mean(x, na.rm = TRUE) %>%
-      round(digits = digits) %>%
+    mea <- mean(x, na.rm = TRUE) |>
+      round(digits = digits) |>
       format(nsmall = digits, trim = TRUE)
   } else {
-    sd <- Hmisc::wtd.var(x = x, weights = weights, na.rm = na.rm) %>%
-      sqrt() %>%
-      round(digits = digits) %>%
+    sd <- Hmisc::wtd.var(x = x, weights = weights, na.rm = na.rm) |>
+      sqrt() |>
+      round(digits = digits) |>
       format(nsmall = digits, trim = TRUE)
-    mea <- stats::weighted.mean(x = x, w = weights, na.rm = na.rm) %>%
-      round(digits = digits) %>%
+    mea <- stats::weighted.mean(x = x, w = weights, na.rm = na.rm) |>
+      round(digits = digits) |>
       format(nsmall = digits, trim = TRUE)
   }
 

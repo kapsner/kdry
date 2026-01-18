@@ -4,6 +4,13 @@
 
 ## Unreleased (2026-01-18)
 
+#### Other changes
+
+-   removed magrittr in favour of base r pipe
+    ([9799099](https://github.com/kapsner/kdry/tree/97990999134769b8f198bc0b361ec1ec641344b4))
+
+## v0.0.3 (2026-01-18)
+
 #### New features
 
 -   added new reporting fun rep_frac_pct2
@@ -27,7 +34,7 @@
 #### Other changes
 
 -   updated description
-    ([8529372](https://github.com/kapsner/kdry/tree/8529372e3a52a2915dfcfec3680fe6cc15def9c0))
+    ([498c97a](https://github.com/kapsner/kdry/tree/498c97a2f9426876654b554dee788e58625a6105))
 -   added doi
     ([8bacc33](https://github.com/kapsner/kdry/tree/8bacc33dc1a886a97e522ddfa9087ef710940bd2))
 -   added readme.qmd
@@ -50,7 +57,7 @@
     ([ef16560](https://github.com/kapsner/kdry/tree/ef1656065cb0a69e6db9a29e9d00008c9f1bfaee))
 
 Full set of changes:
-[`v0.0.1...8529372`](https://github.com/kapsner/kdry/compare/v0.0.1...8529372)
+[`v0.0.1...v0.0.3`](https://github.com/kapsner/kdry/compare/v0.0.1...v0.0.3)
 
 ## v0.0.1 (2023-04-16)
 

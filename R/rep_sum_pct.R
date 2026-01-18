@@ -22,17 +22,19 @@
 #' rep_sum_pct(40, 200, brackets = "square", suffix = FALSE)
 #'
 #' @export
-rep_sum_pct <- function(count,
-                        count_reference,
-                        digits = 2,
-                        na.rm = TRUE, # nolint
-                        brackets = c("round", "square"),
-                        suffix = TRUE
+rep_sum_pct <- function(
+  count,
+  count_reference,
+  digits = 2,
+  na.rm = TRUE, # nolint
+  brackets = c("round", "square"),
+  suffix = TRUE
 ) {
   stopifnot(
-    "`count` and `count_reference` must be numeric of length() == 1" =
-      sapply(c(count, count_reference),
-             function(x) is.numeric(x) && length(x) == 1)
+    "`count` and `count_reference` must be numeric of length() == 1" = sapply(
+      c(count, count_reference),
+      function(x) is.numeric(x) && length(x) == 1
+    )
   )
   if (isTRUE(suffix)) {
     add_suffix <- "%"
@@ -40,8 +42,8 @@ rep_sum_pct <- function(count,
     add_suffix <- ""
   }
 
-  pct <- (count / count_reference * 100) %>%
-    round(digits = digits) %>%
+  pct <- (count / count_reference * 100) |>
+    round(digits = digits) |>
     format(nsmall = digits, trim = TRUE)
 
   return(rep_distribution_meta(

@@ -20,7 +20,7 @@ my_desc$set_authors(c(
 # Remove some author fields
 my_desc$del("Maintainer")
 # Set the version
-my_desc$set_version("0.0.3")
+my_desc$set_version("0.0.3.9001")
 # The title of your package
 my_desc$set(Title = "K's \"Don't Repeat Yourself\"-Collection")
 # The description of your package
@@ -57,12 +57,11 @@ my_desc$write(file = "DESCRIPTION")
 usethis::use_gpl3_license()
 
 # Depends
-usethis::use_package("R", min_version = "2.10", type = "Depends")
+usethis::use_package("R", min_version = "4.1.0", type = "Depends")
 
 # Imports
 # https://cran.r-project.org/web/packages/data.table/vignettes/datatable-importing.html
 usethis::use_package("data.table", type = "Imports")
-usethis::use_package("magrittr", type = "Imports")
 usethis::use_package("utils", type = "Imports")
 usethis::use_package("parallel", type = "Imports")
 usethis::use_package("doParallel", type = "Imports")
